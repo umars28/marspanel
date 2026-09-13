@@ -1,0 +1,114 @@
+.mpn-cal {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mpn-cal-head {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-3);
+  padding: var(--mpn-card-pad);
+}
+
+.mpn-cal-month {
+  font-size: var(--mpn-fs-md);
+  font-weight: 600;
+  letter-spacing: var(--mpn-track-tight);
+}
+
+.mpn-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: var(--mpn-border-w) solid var(--mpn-line);
+}
+
+.mpn-cal-dow {
+  padding: var(--mpn-sp-2);
+  border-bottom: var(--mpn-border-w) solid var(--mpn-line);
+  font-size: var(--mpn-fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--mpn-track-eyebrow);
+  color: var(--mpn-fg-faint);
+  text-align: center;
+}
+
+.mpn-cal-day {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 92px;
+  padding: var(--mpn-sp-2);
+  border-inline-end: var(--mpn-border-w) solid var(--mpn-line);
+  border-bottom: var(--mpn-border-w) solid var(--mpn-line);
+  min-width: 0;
+}
+
+.mpn-cal-day:nth-child(7n) {
+  border-inline-end: 0;
+}
+
+.mpn-cal-day:hover {
+  background: var(--mpn-bg-hover);
+}
+
+.mpn-cal-day.is-outside {
+  color: var(--mpn-fg-faint);
+  opacity: 0.55;
+}
+
+.mpn-cal-num {
+  font-family: var(--mpn-font-mono);
+  font-size: var(--mpn-fs-sm);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-cal-day.is-today .mpn-cal-num {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--mpn-radius-pill);
+  background: var(--mpn-accent-gradient);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mpn-cal-event {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px var(--mpn-sp-2);
+  border-radius: var(--mpn-radius-xs);
+  background: var(--mpn-state-tint, var(--mpn-accent-tint));
+  color: var(--mpn-state, var(--mpn-accent));
+  font-size: var(--mpn-fs-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mpn-cal-event::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  border-radius: var(--mpn-radius-pill);
+  background: currentColor;
+}
+
+.mpn-cal-more {
+  font-size: var(--mpn-fs-xs);
+  color: var(--mpn-fg-faint);
+}
+
+@media (max-width: 820px) {
+  .mpn-cal-day {
+    min-height: 64px;
+  }
+
+  .mpn-cal-event {
+    font-size: 10px;
+  }
+}

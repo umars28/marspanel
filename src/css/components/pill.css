@@ -1,0 +1,115 @@
+.mpn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  padding: 3px var(--mpn-sp-2);
+  border-radius: var(--mpn-radius-pill);
+  background: var(--mpn-state-tint);
+  color: var(--mpn-state);
+  font-family: var(--mpn-font-mono);
+  font-size: var(--mpn-fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mpn-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: var(--mpn-radius-pill);
+  background: currentColor;
+  flex: 0 0 auto;
+}
+
+.mpn-pill-bare {
+  padding: 0;
+  background: transparent;
+}
+
+.mpn-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--mpn-radius-pill);
+  background: var(--mpn-state);
+  flex: 0 0 auto;
+}
+
+.mpn-is-ok {
+  --mpn-state: var(--mpn-ok);
+  --mpn-state-tint: var(--mpn-ok-tint);
+}
+
+.mpn-is-warn {
+  --mpn-state: var(--mpn-warn);
+  --mpn-state-tint: var(--mpn-warn-tint);
+}
+
+.mpn-is-danger {
+  --mpn-state: var(--mpn-danger);
+  --mpn-state-tint: var(--mpn-danger-tint);
+}
+
+.mpn-is-info {
+  --mpn-state: var(--mpn-info);
+  --mpn-state-tint: var(--mpn-info-tint);
+}
+
+.mpn-is-pending {
+  --mpn-state: var(--mpn-pending);
+  --mpn-state-tint: var(--mpn-pending-tint);
+}
+
+.mpn-is-idle {
+  --mpn-state: var(--mpn-idle);
+  --mpn-state-tint: var(--mpn-idle-tint);
+}
+
+.mpn-is-pending .mpn-pill::before,
+.mpn-pill.mpn-is-pending::before {
+  animation: mpn-pulse 1.6s var(--mpn-ease) infinite;
+}
+
+@keyframes mpn-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.mpn-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mpn-sp-1);
+  padding: 2px var(--mpn-sp-2);
+  border: var(--mpn-border-w) solid var(--mpn-border);
+  border-radius: var(--mpn-radius-xs);
+  font-family: var(--mpn-font-mono);
+  font-size: var(--mpn-fs-xs);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  padding: 4px var(--mpn-sp-3);
+  border: var(--mpn-border-w) solid var(--mpn-border-strong);
+  border-radius: var(--mpn-radius-pill);
+  font-size: var(--mpn-fs-sm);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-chip:hover {
+  background: var(--mpn-bg-hover);
+  color: var(--mpn-fg);
+}
+
+.mpn-chip[aria-pressed="true"] {
+  border-color: var(--mpn-accent-line);
+  background: var(--mpn-accent-tint);
+  color: var(--mpn-accent);
+}

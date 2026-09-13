@@ -1,0 +1,139 @@
+.mpn-il {
+  display: block;
+  width: 240px;
+  height: 180px;
+  max-width: 100%;
+}
+
+.mpn-il-sm {
+  width: 160px;
+  height: 120px;
+}
+
+.mpn-il-lg {
+  width: 320px;
+  height: 240px;
+}
+
+.mpn-il-glow {
+  fill: url(#mpn-il-glow);
+  stroke: none;
+}
+
+.mpn-il-line {
+  fill: none;
+  stroke: var(--mpn-fg-faint);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mpn-il-soft {
+  fill: var(--mpn-bg-raised);
+  stroke: none;
+}
+
+.mpn-il-dash {
+  fill: none;
+  stroke: var(--mpn-border-strong);
+  stroke-width: 2;
+  stroke-dasharray: 5 5;
+  stroke-linecap: round;
+}
+
+.mpn-il-accent {
+  fill: none;
+  stroke: var(--mpn-accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mpn-il-accent-fill {
+  fill: var(--mpn-accent);
+  stroke: none;
+}
+
+.mpn-il-danger {
+  fill: none;
+  stroke: var(--mpn-danger);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.mpn-il-ok {
+  fill: none;
+  stroke: var(--mpn-ok);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mpn-il-ok-soft {
+  fill: var(--mpn-ok-tint);
+  stroke: none;
+}
+
+.mpn-il-text {
+  fill: var(--mpn-fg-faint);
+  stroke: none;
+  font-family: var(--mpn-font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.mpn-il-plate-bg {
+  fill: var(--mpn-bg-raised);
+  stroke: none;
+}
+
+.mpn-il-plate-edge {
+  fill: none;
+  stroke: url(#mpn-il-plate);
+  stroke-width: 1.5;
+}
+
+.mpn-il-plate-grid line {
+  stroke: var(--mpn-grid-line);
+  stroke-width: 1;
+}
+
+.mpn-il-bracket path {
+  fill: none;
+  stroke: var(--mpn-focus);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.mpn-state-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mpn-sp-4);
+  min-height: 60vh;
+  padding: var(--mpn-sp-8) var(--mpn-sp-6);
+  text-align: center;
+}
+
+.mpn-state-code {
+  font-family: var(--mpn-font-mono);
+  font-size: var(--mpn-fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--mpn-track-eyebrow);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-state-title {
+  font-size: var(--mpn-fs-xl);
+  font-weight: 600;
+  letter-spacing: var(--mpn-track-tight);
+}
+
+.mpn-state-body {
+  max-width: 46ch;
+  color: var(--mpn-fg-muted);
+  line-height: var(--mpn-lh-loose);
+}

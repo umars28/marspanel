@@ -1,0 +1,207 @@
+.mpn-card {
+  position: relative;
+  min-width: 0;
+  border: var(--mpn-border-w) solid var(--mpn-border);
+  border-radius: var(--mpn-radius);
+  background: var(--mpn-bg-raised);
+  box-shadow: var(--mpn-shadow);
+  backdrop-filter: blur(var(--mpn-blur)) saturate(var(--mpn-saturate));
+  -webkit-backdrop-filter: blur(var(--mpn-blur)) saturate(var(--mpn-saturate));
+}
+
+.mpn-card-head {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-3);
+  padding: var(--mpn-card-pad) var(--mpn-card-pad) 0;
+}
+
+.mpn-card-title {
+  font-size: var(--mpn-fs-base);
+  font-weight: 600;
+  letter-spacing: var(--mpn-track-tight);
+}
+
+.mpn-card-sub {
+  margin-top: 2px;
+  font-size: var(--mpn-fs-sm);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-card-act {
+  margin-inline-start: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mpn-sp-1);
+  font-size: var(--mpn-fs-sm);
+  color: var(--mpn-accent);
+}
+
+.mpn-card-body {
+  padding: var(--mpn-card-pad);
+}
+
+.mpn-card-foot {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  padding: var(--mpn-card-pad);
+  border-top: var(--mpn-border-w) solid var(--mpn-line);
+}
+
+.mpn-card-flush > .mpn-card-body {
+  padding: 0;
+}
+
+.mpn-section-head {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-3);
+  padding-bottom: var(--mpn-sp-2);
+}
+
+.mpn-stat-label {
+  font-size: var(--mpn-fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--mpn-track-eyebrow);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-stat-value {
+  margin: var(--mpn-sp-3) 0 var(--mpn-sp-1);
+  font-family: var(--mpn-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--mpn-fs-2xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--mpn-track-tight);
+}
+
+.mpn-stat-unit {
+  font-size: 0.5em;
+  font-weight: 500;
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-stat-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  font-size: var(--mpn-fs-sm);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-delta {
+  font-family: var(--mpn-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.mpn-delta-up {
+  color: var(--mpn-ok);
+}
+
+.mpn-delta-down {
+  color: var(--mpn-danger);
+}
+
+.mpn-delta-flat {
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-meter {
+  height: 5px;
+  margin-top: var(--mpn-sp-3);
+  border-radius: var(--mpn-radius-pill);
+  background: var(--mpn-bg-inset);
+  overflow: hidden;
+}
+
+.mpn-meter-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--mpn-accent-solid);
+  transition: width var(--mpn-dur-slow) var(--mpn-ease);
+}
+
+.mpn-meter-fill.is-warn {
+  background: var(--mpn-warn);
+}
+
+.mpn-meter-fill.is-danger {
+  background: var(--mpn-danger);
+}
+
+.mpn-kv {
+  display: grid;
+  grid-template-columns: minmax(120px, auto) minmax(0, 1fr);
+  gap: var(--mpn-sp-2) var(--mpn-sp-4);
+  font-size: var(--mpn-fs-base);
+}
+
+.mpn-kv dt {
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-kv dd {
+  font-family: var(--mpn-font-mono);
+  color: var(--mpn-fg);
+  overflow-wrap: anywhere;
+}
+
+.mpn-card-quiet {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.mpn-card-state {
+  border-color: var(--mpn-state);
+}
+
+.mpn-card-state::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  width: 3px;
+  border-radius: var(--mpn-radius) 0 0 var(--mpn-radius);
+  background: var(--mpn-state);
+}
+
+.mpn-infobox {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-4);
+  padding: var(--mpn-card-pad);
+}
+
+.mpn-infobox-mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  border-radius: var(--mpn-radius-sm);
+  background: var(--mpn-state-tint, var(--mpn-accent-tint));
+  color: var(--mpn-state, var(--mpn-accent));
+}
+
+.mpn-infobox-body {
+  min-width: 0;
+}
+
+.mpn-infobox .mpn-stat-value {
+  margin: 2px 0 0;
+  font-size: var(--mpn-fs-xl);
+}
+
+.mpn-widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--mpn-gap);
+}

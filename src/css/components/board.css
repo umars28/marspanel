@@ -1,0 +1,141 @@
+.mpn-board {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(268px, 1fr);
+  gap: var(--mpn-gap);
+  padding: var(--mpn-card-pad);
+  overflow-x: auto;
+  align-items: start;
+}
+
+.mpn-board-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mpn-sp-2);
+  min-width: 0;
+  padding: var(--mpn-sp-3);
+  border: var(--mpn-border-w) solid var(--mpn-border);
+  border-radius: var(--mpn-radius);
+  background: var(--mpn-bg-sunken);
+}
+
+.mpn-board-head {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  padding: 0 var(--mpn-sp-1) var(--mpn-sp-1);
+}
+
+.mpn-board-title {
+  font-size: var(--mpn-fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--mpn-track-eyebrow);
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-board-count {
+  font-family: var(--mpn-font-mono);
+  font-size: var(--mpn-fs-xs);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-board-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mpn-sp-2);
+  padding: var(--mpn-sp-3);
+  border: var(--mpn-border-w) solid var(--mpn-border);
+  border-radius: var(--mpn-radius-sm);
+  background: var(--mpn-bg-raised);
+  box-shadow: var(--mpn-shadow-sm);
+  cursor: grab;
+}
+
+.mpn-board-card:hover {
+  border-color: var(--mpn-border-strong);
+}
+
+.mpn-board-card.is-dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.mpn-board-card-title {
+  font-size: var(--mpn-fs-base);
+  font-weight: 600;
+  color: var(--mpn-fg);
+}
+
+.mpn-board-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-2);
+  font-size: var(--mpn-fs-xs);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-board-drop {
+  min-height: 56px;
+  border: 1px dashed var(--mpn-border-strong);
+  border-radius: var(--mpn-radius-sm);
+}
+
+.mpn-topo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mpn-sp-4);
+  padding: var(--mpn-card-pad);
+  overflow-x: auto;
+}
+
+.mpn-topo-row {
+  display: flex;
+  align-items: center;
+  gap: var(--mpn-sp-3);
+  min-width: max-content;
+}
+
+.mpn-topo-node {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 132px;
+  padding: var(--mpn-sp-2) var(--mpn-sp-3);
+  border: var(--mpn-border-w) solid var(--mpn-border);
+  border-radius: var(--mpn-radius-sm);
+  background: var(--mpn-bg-raised);
+  font-size: var(--mpn-fs-sm);
+}
+
+.mpn-topo-node.is-state {
+  border-color: var(--mpn-state);
+  background: var(--mpn-state-tint);
+}
+
+.mpn-topo-name {
+  font-family: var(--mpn-font-mono);
+  font-weight: 600;
+  color: var(--mpn-fg);
+}
+
+.mpn-topo-sub {
+  font-size: var(--mpn-fs-xs);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-topo-arrow {
+  flex: 0 0 32px;
+  height: 1px;
+  position: relative;
+  background: var(--mpn-border-strong);
+}
+
+.mpn-topo-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -3px;
+  border: 3.5px solid transparent;
+  border-left-color: var(--mpn-border-strong);
+}
