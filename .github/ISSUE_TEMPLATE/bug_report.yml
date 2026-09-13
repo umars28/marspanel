@@ -1,0 +1,54 @@
+name: Bug report
+description: Something renders or behaves wrong
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing: run `node build/index.mjs`. If `verify` or `a11y` reports the problem,
+        paste that output — it is usually more precise than a description.
+
+  - type: input
+    id: page
+    attributes:
+      label: Where
+      description: Page, component class or token
+      placeholder: pages/instances.html · .mpn-table · --mpn-border
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: conditions
+    attributes:
+      label: Does it happen in
+      description: Check every one you reproduced it in. The answer usually points straight at the cause.
+      options:
+        - label: dark theme
+        - label: light theme
+        - label: LTR
+        - label: RTL (`dir="rtl"`)
+        - label: below 1100px (icon rail)
+        - label: below 820px (drawer)
+        - label: print preview
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 141 on macOS 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: build
+    attributes:
+      label: Build output
+      description: Output of `node build/index.mjs`, if you ran it
+      render: text

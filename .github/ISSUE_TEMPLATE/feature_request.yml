@@ -1,0 +1,49 @@
+name: Component or feature request
+description: Propose something the library does not cover
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Some things are deliberately out of scope and will be closed: carousels, rich-text editors,
+        third-party chart libraries, and anything that needs a runtime dependency, a webfont or a
+        CDN. A page that makes no requests of its own is the product, not a limitation of it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What screen were you building when you needed this
+      description: The concrete screen, not the abstract component. It usually changes the answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you did instead
+      description: Existing classes you combined, or CSS you had to write yourself
+    validations:
+      required: true
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Which layer does this belong in
+      options:
+        - A token (a value that needs a role)
+        - A component (new classes)
+        - A behaviour (a new data-mpn-* attribute)
+        - A page
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Confirm
+      options:
+        - label: It needs no runtime dependency, webfont or CDN
+          required: true
+        - label: It works in both themes and in RTL
+          required: true
