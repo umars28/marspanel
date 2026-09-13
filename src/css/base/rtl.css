@@ -1,0 +1,103 @@
+[dir="rtl"] .mpn-select {
+  background-position: left 18px center, left 13px center;
+  padding-inline-end: var(--mpn-sp-3);
+  padding-inline-start: var(--mpn-sp-7);
+}
+
+[dir="rtl"] .mpn-summary::after,
+[dir="rtl"] .mpn-combo::after {
+  transform: rotate(-45deg);
+}
+
+[dir="rtl"] details[open] > .mpn-summary::after {
+  transform: rotate(135deg);
+}
+
+[dir="rtl"] .mpn-btn-group > .mpn-btn:first-child {
+  border-radius: 0 var(--mpn-radius-sm) var(--mpn-radius-sm) 0;
+}
+
+[dir="rtl"] .mpn-btn-group > .mpn-btn:last-child {
+  border-radius: var(--mpn-radius-sm) 0 0 var(--mpn-radius-sm);
+}
+
+[dir="rtl"] .mpn-addon > :first-child {
+  border-radius: 0 var(--mpn-radius-sm) var(--mpn-radius-sm) 0;
+}
+
+[dir="rtl"] .mpn-addon > :last-child {
+  border-radius: var(--mpn-radius-sm) 0 0 var(--mpn-radius-sm);
+}
+
+[dir="rtl"] .mpn-card-head {
+  border-radius: var(--mpn-radius) var(--mpn-radius) 0 0;
+}
+
+[dir="rtl"] .mpn-msg-bubble {
+  border-radius: var(--mpn-radius) var(--mpn-radius) var(--mpn-radius) var(--mpn-radius-xs);
+}
+
+[dir="rtl"] .mpn-msg-self .mpn-msg-bubble {
+  border-radius: var(--mpn-radius) var(--mpn-radius) var(--mpn-radius-xs) var(--mpn-radius);
+}
+
+[dir="rtl"] .mpn-row-danger td,
+[dir="rtl"] .mpn-row-warn td,
+[dir="rtl"] .mpn-chat-thread[aria-selected="true"] {
+  box-shadow: inset -2px 0 0 var(--mpn-state, var(--mpn-accent));
+}
+
+[dir="rtl"] .mpn-row-danger td {
+  --mpn-state: var(--mpn-danger);
+}
+
+[dir="rtl"] .mpn-row-warn td {
+  --mpn-state: var(--mpn-warn);
+}
+
+[dir="rtl"] .mpn-card-state::before {
+  border-radius: 0 var(--mpn-radius) var(--mpn-radius) 0;
+}
+
+[dir="rtl"] .mpn-tree-branch[data-open] > .mpn-tree-node .mpn-tree-caret,
+[dir="rtl"] [data-mpn-nav-group][aria-expanded="true"] .mpn-nav-caret {
+  transform: rotate(-90deg);
+}
+
+[dir="rtl"] .mpn-tree-caret,
+[dir="rtl"] .mpn-nav-caret {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .mpn-topo-arrow::after {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  border-left-color: transparent;
+  border-right-color: var(--mpn-border-strong);
+}
+
+[dir="rtl"] .mpn-split {
+  direction: rtl;
+}
+
+@media (max-width: 820px) {
+  [dir="rtl"] .mpn-sidebar {
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"]:root[data-nav="open"] .mpn-sidebar,
+  [dir="rtl"] :root[data-nav="open"] .mpn-sidebar {
+    transform: none;
+  }
+}
+
+[dir="rtl"] .mpn-drawer {
+  animation-name: mpn-slide-in-rtl;
+}
+
+@keyframes mpn-slide-in-rtl {
+  from {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+}

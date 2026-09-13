@@ -1,0 +1,140 @@
+@media print {
+  :root {
+    color-scheme: light;
+    --mpn-bg: #ffffff;
+    --mpn-bg-sunken: #ffffff;
+    --mpn-bg-raised: #ffffff;
+    --mpn-bg-overlay: #ffffff;
+    --mpn-bg-inset: #f4f4f8;
+    --mpn-bg-hover: transparent;
+    --mpn-border: #c9c9d4;
+    --mpn-border-strong: #9a9aa8;
+    --mpn-line: #d8d8e0;
+    --mpn-fg: #000000;
+    --mpn-fg-muted: #333340;
+    --mpn-fg-faint: #5a5a68;
+    --mpn-accent: #3b34c4;
+    --mpn-accent-solid: #3b34c4;
+    --mpn-shadow: none;
+    --mpn-shadow-sm: none;
+    --mpn-shadow-lg: none;
+    --mpn-wash: none;
+    --mpn-grid-line: #e6e6ee;
+    --mpn-radius: 4px;
+    --mpn-radius-sm: 3px;
+    --mpn-blur: 0px;
+  }
+
+  .mpn-root::before,
+  .mpn-sidebar,
+  .mpn-topbar,
+  .mpn-scrim,
+  .mpn-toasts,
+  .mpn-tooltip,
+  .mpn-menu,
+  .mpn-popover,
+  .mpn-palette,
+  .mpn-drawer,
+  .mpn-page-actions,
+  .mpn-toolbar,
+  .mpn-bulkbar,
+  .mpn-pager,
+  .mpn-pagination,
+  .mpn-card-act,
+  .mpn-nav-toggle,
+  .mpn-btn,
+  .mpn-icon-btn,
+  [data-mpn-no-print] {
+    display: none !important;
+  }
+
+  .mpn-app {
+    display: block;
+  }
+
+  .mpn-page {
+    max-width: none;
+    padding: 0;
+    gap: 12pt;
+  }
+
+  .mpn-card,
+  .mpn-modal {
+    border: 1px solid var(--mpn-border);
+    background: #ffffff;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    break-inside: avoid;
+  }
+
+  .mpn-grid {
+    gap: 12pt;
+  }
+
+  .mpn-table {
+    break-inside: auto;
+  }
+
+  .mpn-table thead {
+    display: table-header-group;
+  }
+
+  .mpn-table tr {
+    break-inside: avoid;
+  }
+
+  .mpn-table th {
+    position: static;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1pt solid var(--mpn-border-strong);
+  }
+
+  .mpn-table-wrap {
+    overflow: visible;
+  }
+
+  .mpn-pill {
+    background: transparent;
+    border: 0.6pt solid currentColor;
+  }
+
+  .mpn-btn-primary,
+  .mpn-brand-mark,
+  .mpn-meter-fill,
+  .mpn-progress-fill {
+    background: var(--mpn-accent-solid) !important;
+    color: #ffffff;
+  }
+
+  .mpn-print-only {
+    display: revert !important;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: var(--mpn-fg-faint);
+  }
+
+  .mpn-page-head {
+    break-after: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  .mpn-card-title,
+  .mpn-page-title {
+    break-after: avoid;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+}
+
+.mpn-print-only {
+  display: none;
+}
