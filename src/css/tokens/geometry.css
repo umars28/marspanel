@@ -1,0 +1,44 @@
+:root {
+  --mpn-radius-xs: 4px;
+  --mpn-radius-sm: 8px;
+  --mpn-radius: 12px;
+  --mpn-radius-lg: 16px;
+  --mpn-radius-pill: 999px;
+
+  --mpn-border-w: 1px;
+
+  --mpn-row-h: 42px;
+  --mpn-row-h-compact: 34px;
+  --mpn-card-pad: 18px;
+  --mpn-gap: 16px;
+  --mpn-control-h: 34px;
+  --mpn-control-pad-x: 14px;
+
+  --mpn-sidebar-w: 244px;
+  --mpn-sidebar-w-rail: 60px;
+  --mpn-topbar-h: 56px;
+  --mpn-drawer-w: 480px;
+  --mpn-content-max: 1600px;
+
+  --mpn-blur: 22px;
+  --mpn-blur-chrome: 20px;
+  --mpn-saturate: 170%;
+
+  --mpn-bp-wide: 1300px;
+  --mpn-bp-rail: 1100px;
+  --mpn-bp-drawer: 820px;
+}
+
+[data-density="compact"] {
+  --mpn-row-h: 34px;
+  --mpn-card-pad: 14px;
+  --mpn-gap: 12px;
+  --mpn-control-h: 30px;
+}
+
+[data-density="relaxed"] {
+  --mpn-row-h: 52px;
+  --mpn-card-pad: 22px;
+  --mpn-gap: 20px;
+  --mpn-control-h: 40px;
+}

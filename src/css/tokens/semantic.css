@@ -1,0 +1,120 @@
+:root {
+  color-scheme: dark;
+
+  --mpn-bg: var(--mpn-ink-950);
+  --mpn-bg-sunken: var(--mpn-glass-1);
+  --mpn-bg-raised: var(--mpn-glass-2);
+  --mpn-bg-overlay: var(--mpn-ink-850);
+  --mpn-bg-inset: rgba(0, 0, 0, 0.24);
+  --mpn-bg-hover: var(--mpn-glass-2);
+  --mpn-bg-active: var(--mpn-glass-3);
+
+  --mpn-border: var(--mpn-glass-line);
+  --mpn-border-strong: var(--mpn-glass-line-strong);
+  --mpn-line: rgba(255, 255, 255, 0.07);
+  --mpn-sheen: var(--mpn-glass-sheen);
+
+  --mpn-fg: #eaeafb;
+  --mpn-fg-muted: var(--mpn-ink-300);
+  --mpn-fg-faint: var(--mpn-ink-400);
+  --mpn-fg-on-accent: #ffffff;
+
+  --mpn-accent: var(--mpn-indigo-300);
+  --mpn-accent-solid: var(--mpn-indigo-500);
+  --mpn-accent-hover: var(--mpn-indigo-400);
+  --mpn-accent-tint: rgba(129, 140, 248, 0.16);
+  --mpn-accent-line: rgba(129, 140, 248, 0.36);
+  --mpn-accent-gradient: linear-gradient(
+    135deg,
+    var(--mpn-cyan-400) 0%,
+    var(--mpn-indigo-500) 55%,
+    var(--mpn-violet-400) 100%
+  );
+
+  --mpn-focus: var(--mpn-cyan-400);
+  --mpn-focus-ring: 0 0 0 2px var(--mpn-bg), 0 0 0 4px var(--mpn-focus);
+
+  --mpn-ok: var(--mpn-green-400);
+  --mpn-warn: var(--mpn-amber-400);
+  --mpn-danger: var(--mpn-rose-400);
+  --mpn-info: var(--mpn-sky-400);
+  --mpn-pending: var(--mpn-purple-400);
+  --mpn-idle: var(--mpn-slate-400);
+
+  --mpn-ok-tint: rgba(74, 222, 128, 0.13);
+  --mpn-warn-tint: rgba(251, 191, 36, 0.13);
+  --mpn-danger-tint: rgba(251, 113, 133, 0.13);
+  --mpn-info-tint: rgba(56, 189, 248, 0.13);
+  --mpn-pending-tint: rgba(192, 132, 252, 0.13);
+  --mpn-idle-tint: rgba(148, 163, 184, 0.12);
+
+  --mpn-shadow-sm: 0 1px 0 var(--mpn-sheen) inset, 0 2px 8px rgba(0, 0, 0, 0.3);
+  --mpn-shadow: 0 1px 0 var(--mpn-sheen) inset, 0 18px 44px rgba(0, 0, 0, 0.38);
+  --mpn-shadow-lg: 0 1px 0 var(--mpn-sheen) inset, 0 32px 80px rgba(0, 0, 0, 0.55);
+  --mpn-glow-accent: 0 6px 18px rgba(99, 102, 241, 0.36);
+
+  --mpn-scrim: rgba(4, 6, 14, 0.64);
+
+  --mpn-wash: radial-gradient(58% 46% at 14% -4%, rgba(99, 102, 241, 0.34), transparent 62%),
+    radial-gradient(48% 42% at 88% 6%, rgba(34, 211, 238, 0.2), transparent 62%),
+    radial-gradient(64% 56% at 52% 104%, rgba(167, 139, 250, 0.2), transparent 62%);
+
+  --mpn-grid-line: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --mpn-bg: var(--mpn-ink-25);
+  --mpn-bg-sunken: var(--mpn-frost-1);
+  --mpn-bg-raised: var(--mpn-frost-2);
+  --mpn-bg-overlay: var(--mpn-frost-3);
+  --mpn-bg-inset: rgba(80, 70, 180, 0.05);
+  --mpn-bg-hover: rgba(99, 102, 241, 0.06);
+  --mpn-bg-active: rgba(99, 102, 241, 0.1);
+
+  --mpn-border: var(--mpn-frost-line);
+  --mpn-border-strong: var(--mpn-frost-line-strong);
+  --mpn-line: rgba(80, 70, 180, 0.1);
+  --mpn-sheen: var(--mpn-frost-sheen);
+
+  --mpn-fg: #1b1a3a;
+  --mpn-fg-muted: #62608f;
+  --mpn-fg-faint: #8b89b4;
+  --mpn-fg-on-accent: #ffffff;
+
+  --mpn-accent: #5b57e8;
+  --mpn-accent-solid: #5b57e8;
+  --mpn-accent-hover: #4a46d4;
+  --mpn-accent-tint: rgba(91, 87, 232, 0.12);
+  --mpn-accent-line: rgba(91, 87, 232, 0.32);
+
+  --mpn-focus: var(--mpn-cyan-600);
+
+  --mpn-ok: var(--mpn-green-600);
+  --mpn-warn: var(--mpn-amber-600);
+  --mpn-danger: var(--mpn-rose-600);
+  --mpn-info: var(--mpn-sky-600);
+  --mpn-pending: var(--mpn-purple-600);
+  --mpn-idle: var(--mpn-slate-600);
+
+  --mpn-ok-tint: rgba(14, 159, 110, 0.12);
+  --mpn-warn-tint: rgba(199, 119, 0, 0.12);
+  --mpn-danger-tint: rgba(224, 65, 58, 0.1);
+  --mpn-info-tint: rgba(11, 132, 212, 0.11);
+  --mpn-pending-tint: rgba(124, 58, 237, 0.11);
+  --mpn-idle-tint: rgba(123, 122, 156, 0.1);
+
+  --mpn-shadow-sm: 0 1px 0 var(--mpn-sheen) inset, 0 1px 3px rgba(60, 50, 150, 0.07);
+  --mpn-shadow: 0 1px 0 var(--mpn-sheen) inset, 0 14px 36px rgba(60, 50, 150, 0.1);
+  --mpn-shadow-lg: 0 1px 0 var(--mpn-sheen) inset, 0 28px 70px rgba(60, 50, 150, 0.18);
+  --mpn-glow-accent: 0 6px 18px rgba(91, 87, 232, 0.24);
+
+  --mpn-scrim: rgba(40, 38, 90, 0.32);
+
+  --mpn-wash: radial-gradient(58% 46% at 14% -4%, rgba(129, 140, 248, 0.3), transparent 62%),
+    radial-gradient(48% 42% at 88% 6%, rgba(103, 232, 249, 0.26), transparent 62%),
+    radial-gradient(64% 56% at 52% 104%, rgba(196, 181, 253, 0.3), transparent 62%);
+
+  --mpn-grid-line: rgba(80, 70, 180, 0.06);
+}
