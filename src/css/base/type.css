@@ -1,0 +1,88 @@
+.mpn-root {
+  font-family: var(--mpn-font-sans);
+  font-size: var(--mpn-fs-base);
+  line-height: var(--mpn-lh-base);
+  color: var(--mpn-fg);
+}
+
+.mpn-h1,
+.mpn-h2,
+.mpn-h3 {
+  letter-spacing: var(--mpn-track-tight);
+  line-height: var(--mpn-lh-tight);
+  font-weight: 600;
+  color: var(--mpn-fg);
+}
+
+.mpn-h1 {
+  font-size: var(--mpn-fs-xl);
+}
+
+.mpn-h2 {
+  font-size: var(--mpn-fs-lg);
+}
+
+.mpn-h3 {
+  font-size: var(--mpn-fs-md);
+}
+
+.mpn-eyebrow {
+  font-size: var(--mpn-fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--mpn-track-eyebrow);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-mono {
+  font-family: var(--mpn-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95em;
+}
+
+.mpn-muted {
+  color: var(--mpn-fg-muted);
+}
+
+.mpn-faint {
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-link {
+  color: var(--mpn-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--mpn-accent-line);
+  text-underline-offset: 3px;
+}
+
+.mpn-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.mpn-kbd {
+  font-family: var(--mpn-font-mono);
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 5px;
+  border: 1px solid var(--mpn-border-strong);
+  border-radius: var(--mpn-radius-xs);
+  color: var(--mpn-fg-faint);
+}
+
+.mpn-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mpn-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
