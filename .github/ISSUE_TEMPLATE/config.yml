@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: How do I use this?
+    url: https://github.com/umars28/marspanel/tree/main/docs
+    about: Getting started, theming, JavaScript, RTL and print are all documented.
+
+  - name: Why does it look like this?
+    url: https://github.com/umars28/marspanel/blob/main/docs/adr/0001-visual-direction.md
+    about: The nine visual directions Aurora was chosen against, and what it costs.
+
+  - name: A colour looks wrong
+    url: https://github.com/umars28/marspanel/blob/main/docs/accessibility.md
+    about: Every pair is measured on each build. Check the report before filing.
+
+  - name: Security issue
+    url: https://github.com/umars28/marspanel/security/advisories/new
+    about: Report privately. Do not open a public issue for something exploitable.
