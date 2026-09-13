@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build
+        run: node build/index.mjs
+
+      - name: Fail if dist is stale
+        run: |
+          if [ -n "$(git status --porcelain dist pages docs/accessibility.md)" ]; then
+            echo "Committed output does not match the sources it is built from:"
+            git status --porcelain dist pages docs/accessibility.md
+            echo
+            echo "Run 'node build/index.mjs' and commit the result."
+            git --no-pager diff --stat dist pages docs/accessibility.md
+            exit 1
+          fi

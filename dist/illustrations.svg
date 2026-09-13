@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true" data-mpn-sprite="illustrations">
+
+<defs>
+  <radialGradient id="mpn-il-glow" cx="50%" cy="42%" r="52%">
+    <stop offset="0%" stop-color="var(--mpn-accent)" stop-opacity=".28"/>
+    <stop offset="60%" stop-color="var(--mpn-focus)" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="var(--mpn-accent)" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="mpn-il-plate" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="var(--mpn-focus)"/>
+    <stop offset="52%" stop-color="var(--mpn-accent)"/>
+    <stop offset="100%" stop-color="var(--mpn-pending)"/>
+  </linearGradient>
+</defs>
+
+<symbol id="il-empty" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="96" ry="70"/>
+  <rect class="mpn-il-soft" x="58" y="112" width="124" height="26" rx="6"/>
+  <rect class="mpn-il-line" x="58" y="112" width="124" height="26" rx="6"/>
+  <rect class="mpn-il-soft" x="66" y="88" width="108" height="26" rx="6"/>
+  <rect class="mpn-il-line" x="66" y="88" width="108" height="26" rx="6"/>
+  <rect class="mpn-il-dash" x="74" y="50" width="92" height="34" rx="7"/>
+  <line class="mpn-il-line" x1="88" y1="100" x2="116" y2="100"/>
+  <line class="mpn-il-line" x1="80" y1="124" x2="112" y2="124"/>
+  <circle class="mpn-il-accent" cx="120" cy="67" r="9"/>
+  <line class="mpn-il-accent" x1="120" y1="62" x2="120" y2="68"/>
+  <line class="mpn-il-accent" x1="120" y1="72" x2="120.01" y2="72"/>
+</symbol>
+
+<symbol id="il-no-results" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="96" ry="70"/>
+  <rect class="mpn-il-soft" x="46" y="44" width="148" height="96" rx="10"/>
+  <rect class="mpn-il-line" x="46" y="44" width="148" height="96" rx="10"/>
+  <line class="mpn-il-line" x1="46" y1="66" x2="194" y2="66"/>
+  <line class="mpn-il-dash" x1="62" y1="86" x2="152" y2="86"/>
+  <line class="mpn-il-dash" x1="62" y1="104" x2="128" y2="104"/>
+  <line class="mpn-il-dash" x1="62" y1="122" x2="142" y2="122"/>
+  <circle class="mpn-il-accent" cx="152" cy="106" r="24" style="stroke-width:3"/>
+  <line class="mpn-il-accent" x1="169" y1="123" x2="186" y2="140" style="stroke-width:4"/>
+  <line class="mpn-il-accent" x1="145" y1="99" x2="159" y2="113"/>
+  <line class="mpn-il-accent" x1="159" y1="99" x2="145" y2="113"/>
+</symbol>
+
+<symbol id="il-404" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="100" ry="72"/>
+  <circle class="mpn-il-soft" cx="60" cy="90" r="26"/>
+  <circle class="mpn-il-line" cx="60" cy="90" r="26"/>
+  <circle class="mpn-il-soft" cx="180" cy="90" r="26"/>
+  <circle class="mpn-il-line" cx="180" cy="90" r="26"/>
+  <path class="mpn-il-accent" d="M86 90h18l6-10"/>
+  <path class="mpn-il-accent" d="M154 90h-18l-6 10"/>
+  <line class="mpn-il-dash" x1="108" y1="66" x2="132" y2="114"/>
+  <path class="mpn-il-line" d="M52 84h16M52 96h10"/>
+  <path class="mpn-il-line" d="M172 84h16M178 96h10"/>
+  <text class="mpn-il-text" x="120" y="152" text-anchor="middle">404</text>
+</symbol>
+
+<symbol id="il-500" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="96" ry="70"/>
+  <rect class="mpn-il-soft" x="62" y="36" width="116" height="34" rx="7"/>
+  <rect class="mpn-il-line" x="62" y="36" width="116" height="34" rx="7"/>
+  <rect class="mpn-il-soft" x="62" y="78" width="116" height="34" rx="7"/>
+  <rect class="mpn-il-line" x="62" y="78" width="116" height="34" rx="7"/>
+  <rect class="mpn-il-dash" x="62" y="120" width="116" height="34" rx="7"/>
+  <circle class="mpn-il-line" cx="78" cy="53" r="3"/>
+  <circle class="mpn-il-accent" cx="78" cy="95" r="3"/>
+  <line class="mpn-il-line" x1="92" y1="53" x2="126" y2="53"/>
+  <line class="mpn-il-line" x1="92" y1="95" x2="118" y2="95"/>
+  <polygon class="mpn-il-accent-fill" points="150 82 136 102 148 102 144 118 160 96 148 96 150 82"/>
+</symbol>
+
+<symbol id="il-403" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="84" rx="92" ry="68"/>
+  <path class="mpn-il-soft" d="M120 156s46-24 46-58V44l-46-18-46 18v54c0 34 46 58 46 58z"/>
+  <path class="mpn-il-line" d="M120 156s46-24 46-58V44l-46-18-46 18v54c0 34 46 58 46 58z"/>
+  <rect class="mpn-il-accent" x="104" y="86" width="32" height="24" rx="4"/>
+  <path class="mpn-il-accent" d="M110 86v-7a10 10 0 0 1 20 0v7"/>
+  <line class="mpn-il-accent" x1="120" y1="95" x2="120" y2="101"/>
+</symbol>
+
+<symbol id="il-offline" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="84" rx="96" ry="68"/>
+  <path class="mpn-il-soft" d="M162 118a22 22 0 0 0 2-43.8A31 31 0 0 0 101 78a20 20 0 0 0 2 40z"/>
+  <path class="mpn-il-line" d="M162 118a22 22 0 0 0 2-43.8A31 31 0 0 0 101 78a20 20 0 0 0 2 40z"/>
+  <line class="mpn-il-danger" x1="84" y1="46" x2="180" y2="142" style="stroke-width:4"/>
+  <line class="mpn-il-dash" x1="60" y1="150" x2="180" y2="150"/>
+</symbol>
+
+<symbol id="il-success" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="92" ry="68"/>
+  <circle class="mpn-il-ok-soft" cx="120" cy="86" r="44"/>
+  <circle class="mpn-il-ok" cx="120" cy="86" r="44"/>
+  <polyline class="mpn-il-ok" points="100 87 114 101 141 72" style="stroke-width:4"/>
+  <line class="mpn-il-dash" x1="40" y1="60" x2="58" y2="60"/>
+  <line class="mpn-il-dash" x1="182" y1="112" x2="200" y2="112"/>
+  <circle class="mpn-il-ok" cx="48" cy="112" r="3"/>
+  <circle class="mpn-il-ok" cx="192" cy="58" r="3"/>
+</symbol>
+
+<symbol id="il-upload" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="92" ry="68"/>
+  <rect class="mpn-il-dash" x="52" y="40" width="136" height="100" rx="12"/>
+  <path class="mpn-il-accent" d="M120 112V66"/>
+  <polyline class="mpn-il-accent" points="104 82 120 66 136 82"/>
+  <path class="mpn-il-line" d="M76 122h88"/>
+</symbol>
+
+<symbol id="il-maintenance" viewBox="0 0 240 180">
+  <ellipse class="mpn-il-glow" cx="120" cy="86" rx="92" ry="68"/>
+  <rect class="mpn-il-soft" x="56" y="52" width="128" height="80" rx="10"/>
+  <rect class="mpn-il-line" x="56" y="52" width="128" height="80" rx="10"/>
+  <line class="mpn-il-line" x1="56" y1="74" x2="184" y2="74"/>
+  <circle class="mpn-il-line" cx="69" cy="63" r="3"/>
+  <circle class="mpn-il-line" cx="80" cy="63" r="3"/>
+  <path class="mpn-il-accent" d="M138 90a14 14 0 0 1-18.6 13.2L104 118.6a6 6 0 0 1-8.5-8.5L110.8 95A14 14 0 0 1 128 76.4l-8.6 8.6 5.6 5.6 8.6-8.6A14 14 0 0 1 138 90z"/>
+</symbol>
+
+<symbol id="il-plate" viewBox="0 0 240 180">
+  <rect class="mpn-il-plate-bg" x="8" y="8" width="224" height="164" rx="14"/>
+  <rect class="mpn-il-plate-edge" x="8.75" y="8.75" width="222.5" height="162.5" rx="13.25"/>
+  <g class="mpn-il-plate-grid">
+    <line x1="34" y1="8" x2="34" y2="172"/><line x1="60" y1="8" x2="60" y2="172"/>
+    <line x1="86" y1="8" x2="86" y2="172"/><line x1="112" y1="8" x2="112" y2="172"/>
+    <line x1="138" y1="8" x2="138" y2="172"/><line x1="164" y1="8" x2="164" y2="172"/>
+    <line x1="190" y1="8" x2="190" y2="172"/><line x1="216" y1="8" x2="216" y2="172"/>
+    <line x1="8" y1="34" x2="232" y2="34"/><line x1="8" y1="60" x2="232" y2="60"/>
+    <line x1="8" y1="86" x2="232" y2="86"/><line x1="8" y1="112" x2="232" y2="112"/>
+    <line x1="8" y1="138" x2="232" y2="138"/><line x1="8" y1="164" x2="232" y2="164"/>
+  </g>
+  <ellipse class="mpn-il-glow" cx="120" cy="90" rx="86" ry="62"/>
+  <g class="mpn-il-bracket">
+    <path d="M24 42V24h18"/><path d="M198 24h18v18"/>
+    <path d="M216 138v18h-18"/><path d="M42 156H24v-18"/>
+  </g>
+</symbol>
+
+</svg>
