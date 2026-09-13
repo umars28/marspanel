@@ -1,0 +1,65 @@
+{
+  "name": "marspanel",
+  "version": "0.1.0",
+  "description": "Admin template for infrastructure consoles. Plain HTML, CSS and JavaScript — no build step for consumers, no framework, no runtime network requests.",
+  "keywords": [
+    "admin-template",
+    "dashboard",
+    "css",
+    "design-system",
+    "html",
+    "no-dependencies",
+    "dark-mode",
+    "rtl"
+  ],
+  "homepage": "https://github.com/umars28/marspanel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umars28/marspanel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/umars28/marspanel/issues"
+  },
+  "license": "MIT",
+  "author": "Umar Sabirin",
+  "type": "module",
+  "sideEffects": [
+    "dist/*.css",
+    "dist/*.js"
+  ],
+  "main": "dist/marspanel.js",
+  "style": "dist/marspanel.css",
+  "exports": {
+    ".": "./dist/marspanel.js",
+    "./css": "./dist/marspanel.css",
+    "./css/min": "./dist/marspanel.min.css",
+    "./theme": "./dist/marspanel-theme.js",
+    "./sprites": "./dist/sprites.js",
+    "./icons.svg": "./dist/icons.svg",
+    "./illustrations.svg": "./dist/illustrations.svg",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "starter",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build/index.mjs",
+    "build:css": "node build/css.mjs",
+    "build:js": "node build/js.mjs",
+    "build:sprites": "node build/sprites.mjs",
+    "build:pages": "node build/pages.mjs",
+    "audit:a11y": "node build/a11y.mjs",
+    "verify": "node build/verify.mjs",
+    "serve": "node --run build && node build/serve.mjs",
+    "prepack": "node build/index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
