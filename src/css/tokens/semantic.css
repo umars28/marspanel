@@ -10,7 +10,7 @@
   --mpn-bg-active: var(--mpn-glass-3);
 
   --mpn-border: var(--mpn-glass-line);
-  --mpn-border-strong: var(--mpn-glass-line-strong);
+  --mpn-border-strong: rgba(255, 255, 255, 0.34);
   --mpn-line: rgba(255, 255, 255, 0.07);
   --mpn-sheen: var(--mpn-glass-sheen);
 
@@ -20,7 +20,7 @@
   --mpn-fg-on-accent: #ffffff;
 
   --mpn-accent: var(--mpn-indigo-300);
-  --mpn-accent-solid: var(--mpn-indigo-500);
+  --mpn-accent-solid: var(--mpn-indigo-600);
   --mpn-accent-hover: var(--mpn-indigo-400);
   --mpn-accent-tint: rgba(129, 140, 248, 0.16);
   --mpn-accent-line: rgba(129, 140, 248, 0.36);
@@ -74,7 +74,7 @@
   --mpn-bg-active: rgba(99, 102, 241, 0.1);
 
   --mpn-border: var(--mpn-frost-line);
-  --mpn-border-strong: var(--mpn-frost-line-strong);
+  --mpn-border-strong: rgba(64, 56, 150, 0.68);
   --mpn-line: rgba(80, 70, 180, 0.1);
   --mpn-sheen: var(--mpn-frost-sheen);
 
@@ -91,12 +91,12 @@
 
   --mpn-focus: var(--mpn-cyan-600);
 
-  --mpn-ok: var(--mpn-green-600);
-  --mpn-warn: var(--mpn-amber-600);
-  --mpn-danger: var(--mpn-rose-600);
-  --mpn-info: var(--mpn-sky-600);
-  --mpn-pending: var(--mpn-purple-600);
-  --mpn-idle: var(--mpn-slate-600);
+  --mpn-ok: #056f47;
+  --mpn-warn: #7a5200;
+  --mpn-danger: #a8231c;
+  --mpn-info: #0a5490;
+  --mpn-pending: #5f21b8;
+  --mpn-idle: #575669;
 
   --mpn-ok-tint: rgba(14, 159, 110, 0.12);
   --mpn-warn-tint: rgba(199, 119, 0, 0.12);
