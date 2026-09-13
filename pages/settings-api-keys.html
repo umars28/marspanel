@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API keys — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+    <div class="mpn-nav-label">Overview</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="notifications.html"><svg class="mpn-icon"><use href="#i-bell"/></svg><span>Notifications</span><span class="mpn-nav-badge">3</span></a>
+    <div class="mpn-nav-label">Infrastructure</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-server"/></svg><span>Compute</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="instances.html"><span>Instances</span></a>
+      <a class="mpn-nav-item" href="instance-detail.html"><span>Instance detail</span></a>
+      <a class="mpn-nav-item" href="nodes.html"><span>Nodes</span></a>
+      <a class="mpn-nav-item" href="images.html"><span>Images</span></a>
+    </div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-hard-drive"/></svg><span>Storage</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="volumes.html"><span>Volumes</span></a>
+      <a class="mpn-nav-item" href="files.html"><span>File browser</span></a>
+    </div>
+    <div class="mpn-nav-label">Work</div>
+    <a class="mpn-nav-item" href="board.html"><svg class="mpn-icon"><use href="#i-columns"/></svg><span>Board</span></a>
+    <a class="mpn-nav-item" href="calendar.html"><svg class="mpn-icon"><use href="#i-calendar"/></svg><span>Calendar</span></a>
+    <a class="mpn-nav-item" href="chat.html"><svg class="mpn-icon"><use href="#i-message"/></svg><span>Chat</span></a>
+    <a class="mpn-nav-item" href="timeline.html"><svg class="mpn-icon"><use href="#i-history"/></svg><span>Timeline</span></a>
+    <div class="mpn-nav-label">Account</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="true"><svg class="mpn-icon"><use href="#i-settings"/></svg><span>Settings</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub">
+      <a class="mpn-nav-item" href="settings-profile.html"><span>Profile</span></a>
+      <a class="mpn-nav-item" href="settings-security.html"><span>Security</span></a>
+      <a class="mpn-nav-item" href="settings-api-keys.html" aria-current="page"><span>API keys</span></a>
+      <a class="mpn-nav-item" href="settings-notifications.html"><span>Notifications</span></a>
+      <a class="mpn-nav-item" href="settings-billing.html"><span>Billing</span></a>
+    </div>
+    <a class="mpn-nav-item" href="invoice.html"><svg class="mpn-icon"><use href="#i-file-text"/></svg><span>Invoice</span></a>
+    <a class="mpn-nav-item" href="pricing.html"><svg class="mpn-icon"><use href="#i-dollar"/></svg><span>Pricing</span></a>
+    <a class="mpn-nav-item" href="audit-log.html"><svg class="mpn-icon"><use href="#i-shield"/></svg><span>Audit log</span></a>
+    <div class="mpn-nav-label">Reference</div>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="faq.html"><svg class="mpn-icon"><use href="#i-help"/></svg><span>Help</span></a>
+    <a class="mpn-nav-item" href="blank.html"><svg class="mpn-icon"><use href="#i-file"/></svg><span>Blank page</span></a>
+    <div class="mpn-nav-foot">
+      <button class="mpn-nav-item" data-mpn-sidebar-lock aria-pressed="false"><svg class="mpn-icon"><use href="#i-sidebar"/></svg><span>Collapse</span></button>
+    </div>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>jkt-01</span>
+      <button class="mpn-search" data-mpn-open="palette"><svg class="mpn-icon mpn-icon-sm"><use href="#i-search"/></svg>Search…<kbd class="mpn-kbd">⌘K</kbd></button>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Toggle theme" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Left-to-right / right-to-left" data-mpn-dir-toggle aria-label="Toggle direction"><svg class="mpn-icon"><use href="#i-code"/></svg></button>
+        <a class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="3 unread" href="notifications.html" aria-label="Notifications"><svg class="mpn-icon"><use href="#i-bell"/></svg></a>
+        <button class="mpn-avatar" data-mpn-menu="user-menu" aria-label="Account">UM</button>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Settings</div>
+          <h1 class="mpn-page-title">API keys</h1>
+          <p class="mpn-page-sub">4 keys · 1 without an expiry</p>
+        </div>
+        <div class="mpn-page-actions"><button class="mpn-btn mpn-btn-primary"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create key</button></div>
+      </div>
+      <div class="mpn-tabs">
+        <a class="mpn-tab" href="settings-profile.html" aria-selected="false">Profile</a>
+        <a class="mpn-tab" href="settings-security.html" aria-selected="false">Security</a>
+        <a class="mpn-tab" href="settings-api-keys.html" aria-selected="true">API keys</a>
+        <a class="mpn-tab" href="settings-notifications.html" aria-selected="false">Notifications</a>
+        <a class="mpn-tab" href="settings-billing.html" aria-selected="false">Billing</a>
+      </div>
+      <div class="mpn-banner mpn-is-warn"><svg class="mpn-icon"><use href="#i-key"/></svg><span><strong class="mpn-mono">ci-deploy-key</strong> has no expiry. A key that never expires is a key you will forget to rotate.</span><button class="mpn-btn mpn-btn-sm mpn-banner-act">Set expiry</button></div>
+      <section class="mpn-card">
+        <div class="mpn-table-wrap">
+          <table class="mpn-table" data-mpn-sort>
+            <thead><tr><th data-sort="text">Name</th><th data-sort="text">Prefix</th><th data-sort="text">Scope</th><th data-sort="text">Expires</th><th data-sort="text">Last used</th><th class="mpn-cell-act"></th></tr></thead>
+            <tbody>
+              <tr class="mpn-row-warn"><td class="mpn-cell-key">ci-deploy-key</td><td class="mpn-cell-mono">mpk_7f2a…</td><td><span class="mpn-pill mpn-is-danger">write</span></td><td class="mpn-cell-mono">never</td><td class="mpn-cell-mono">4m ago</td><td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td></tr>
+              <tr><td class="mpn-cell-key">grafana-scrape</td><td class="mpn-cell-mono">mpk_91cd…</td><td><span class="mpn-pill mpn-is-ok">read</span></td><td class="mpn-cell-mono">2026-12-01</td><td class="mpn-cell-mono">12s ago</td><td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td></tr>
+              <tr><td class="mpn-cell-key">laptop-cli</td><td class="mpn-cell-mono">mpk_3b84…</td><td><span class="mpn-pill mpn-is-warn">admin</span></td><td class="mpn-cell-mono">2026-10-02</td><td class="mpn-cell-mono">2d ago</td><td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td></tr>
+              <tr><td class="mpn-cell-key">old-runner</td><td class="mpn-cell-mono">mpk_c410…</td><td><span class="mpn-pill mpn-is-idle">revoked</span></td><td class="mpn-cell-mono">2026-06-30</td><td class="mpn-cell-mono">89d ago</td><td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="mpn-card">
+        <div class="mpn-card-head"><div><h2 class="mpn-card-title">Create a key</h2></div></div>
+        <div class="mpn-card-body">
+          <div class="mpn-grid mpn-g-2">
+            <div class="mpn-field"><label class="mpn-label" for="k-name">Name</label><input class="mpn-input mpn-input-mono" id="k-name" placeholder="ci-deploy-key-2"></div>
+            <div class="mpn-field"><label class="mpn-label" for="k-exp">Expires</label><input class="mpn-input" id="k-exp" data-mpn-datepicker placeholder="YYYY-MM-DD"></div>
+          </div>
+          <div class="mpn-choice-grid" style="margin-top:16px">
+            <label class="mpn-choice"><input type="radio" name="scope" class="mpn-sr" checked><div><div class="mpn-label">Read</div><div class="mpn-hint">List and describe only.</div></div></label>
+            <label class="mpn-choice"><input type="radio" name="scope" class="mpn-sr"><div><div class="mpn-label">Write</div><div class="mpn-hint">Create and mutate resources.</div></div></label>
+            <label class="mpn-choice"><input type="radio" name="scope" class="mpn-sr"><div><div class="mpn-label">Admin</div><div class="mpn-hint">Everything, including IAM.</div></div></label>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-palette" id="palette" hidden>
+  <input class="mpn-palette-field" placeholder="Type a command or search…" aria-label="Command palette">
+  <div class="mpn-palette-list">
+    <div class="mpn-palette-group">Actions</div>
+    <button class="mpn-palette-item" aria-selected="true"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create instance</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-camera"/></svg>Take snapshot</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export instance list</button>
+    <div class="mpn-palette-group">Go to</div>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-server"/></svg>Instances</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-shield"/></svg>Audit log</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Settings</button>
+  </div>
+</div>
+
+<div class="mpn-menu" id="user-menu" hidden>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-user"/></svg>Profile</button>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Preferences</button>
+  <button class="mpn-menu-item" data-mpn-dir-toggle><svg class="mpn-icon mpn-icon-sm"><use href="#i-code"/></svg>Flip direction (RTL)</button>
+  <div class="mpn-menu-sep"></div>
+  <button class="mpn-menu-item is-danger"><svg class="mpn-icon mpn-icon-sm"><use href="#i-log-out"/></svg>Sign out</button>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

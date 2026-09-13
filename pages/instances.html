@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instances — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+    <div class="mpn-nav-label">Overview</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="notifications.html"><svg class="mpn-icon"><use href="#i-bell"/></svg><span>Notifications</span><span class="mpn-nav-badge">3</span></a>
+    <div class="mpn-nav-label">Infrastructure</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="true"><svg class="mpn-icon"><use href="#i-server"/></svg><span>Compute</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub">
+      <a class="mpn-nav-item" href="instances.html" aria-current="page"><span>Instances</span></a>
+      <a class="mpn-nav-item" href="instance-detail.html"><span>Instance detail</span></a>
+      <a class="mpn-nav-item" href="nodes.html"><span>Nodes</span></a>
+      <a class="mpn-nav-item" href="images.html"><span>Images</span></a>
+    </div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-hard-drive"/></svg><span>Storage</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="volumes.html"><span>Volumes</span></a>
+      <a class="mpn-nav-item" href="files.html"><span>File browser</span></a>
+    </div>
+    <div class="mpn-nav-label">Work</div>
+    <a class="mpn-nav-item" href="board.html"><svg class="mpn-icon"><use href="#i-columns"/></svg><span>Board</span></a>
+    <a class="mpn-nav-item" href="calendar.html"><svg class="mpn-icon"><use href="#i-calendar"/></svg><span>Calendar</span></a>
+    <a class="mpn-nav-item" href="chat.html"><svg class="mpn-icon"><use href="#i-message"/></svg><span>Chat</span></a>
+    <a class="mpn-nav-item" href="timeline.html"><svg class="mpn-icon"><use href="#i-history"/></svg><span>Timeline</span></a>
+    <div class="mpn-nav-label">Account</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-settings"/></svg><span>Settings</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="settings-profile.html"><span>Profile</span></a>
+      <a class="mpn-nav-item" href="settings-security.html"><span>Security</span></a>
+      <a class="mpn-nav-item" href="settings-api-keys.html"><span>API keys</span></a>
+      <a class="mpn-nav-item" href="settings-notifications.html"><span>Notifications</span></a>
+      <a class="mpn-nav-item" href="settings-billing.html"><span>Billing</span></a>
+    </div>
+    <a class="mpn-nav-item" href="invoice.html"><svg class="mpn-icon"><use href="#i-file-text"/></svg><span>Invoice</span></a>
+    <a class="mpn-nav-item" href="pricing.html"><svg class="mpn-icon"><use href="#i-dollar"/></svg><span>Pricing</span></a>
+    <a class="mpn-nav-item" href="audit-log.html"><svg class="mpn-icon"><use href="#i-shield"/></svg><span>Audit log</span></a>
+    <div class="mpn-nav-label">Reference</div>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="faq.html"><svg class="mpn-icon"><use href="#i-help"/></svg><span>Help</span></a>
+    <a class="mpn-nav-item" href="blank.html"><svg class="mpn-icon"><use href="#i-file"/></svg><span>Blank page</span></a>
+    <div class="mpn-nav-foot">
+      <button class="mpn-nav-item" data-mpn-sidebar-lock aria-pressed="false"><svg class="mpn-icon"><use href="#i-sidebar"/></svg><span>Collapse</span></button>
+    </div>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>jkt-01</span>
+      <button class="mpn-search" data-mpn-open="palette"><svg class="mpn-icon mpn-icon-sm"><use href="#i-search"/></svg>Search…<kbd class="mpn-kbd">⌘K</kbd></button>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Toggle theme" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Left-to-right / right-to-left" data-mpn-dir-toggle aria-label="Toggle direction"><svg class="mpn-icon"><use href="#i-code"/></svg></button>
+        <a class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="3 unread" href="notifications.html" aria-label="Notifications"><svg class="mpn-icon"><use href="#i-bell"/></svg></a>
+        <button class="mpn-avatar" data-mpn-menu="user-menu" aria-label="Account">UM</button>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Compute</div>
+          <h1 class="mpn-page-title">Instances</h1>
+          <p class="mpn-page-sub"><span class="mpn-mono" data-mpn-filter-count>8</span> of 32 shown · sortable columns</p>
+        </div>
+        <div class="mpn-page-actions"><button class="mpn-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export</button><button class="mpn-btn mpn-btn-primary"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>New instance</button></div>
+      </div>
+
+      <section class="mpn-card">
+        <div class="mpn-toolbar">
+          <input class="mpn-input" style="width:220px" placeholder="Filter rows…" data-mpn-filter="inst-table">
+          <button class="mpn-chip">runtime: all <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+          <button class="mpn-chip" aria-pressed="true">region: jkt-01 <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+          <span class="mpn-spacer"></span>
+          <span class="mpn-btn-group">
+            <button class="mpn-btn mpn-btn-sm" aria-pressed="true">Table</button>
+            <button class="mpn-btn mpn-btn-sm" aria-pressed="false">Cards</button>
+          </span>
+        </div>
+        <div class="mpn-bulkbar" data-mpn-bulkbar hidden>
+          <strong data-mpn-bulk-count>0</strong> selected
+          <button class="mpn-btn mpn-btn-sm">Stop</button>
+          <button class="mpn-btn mpn-btn-sm">Snapshot</button>
+          <button class="mpn-btn mpn-btn-sm mpn-btn-danger">Delete</button>
+        </div>
+        <div class="mpn-table-wrap">
+          <table class="mpn-table mpn-table-stack" id="inst-table" data-mpn-sort>
+            <thead><tr>
+              <th class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-select-all aria-label="Select all"></label></th>
+              <th data-sort="text">Name</th><th data-sort="text">State</th><th data-sort="text">Shape</th>
+              <th data-sort="text">Address</th><th data-sort="text">Node</th><th data-sort="num" class="mpn-cell-num">Age</th><th class="mpn-cell-act"></th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select web-01"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">web-01</a></td>
+                <td data-value="running"><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.17</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-num" data-value="14">14d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select web-02"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">web-02</a></td>
+                <td data-value="running"><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.18</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-num" data-value="14">14d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select db-02"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">db-02</a></td>
+                <td data-value="provisioning"><span class="mpn-pill mpn-is-pending">provisioning</span></td>
+                <td class="mpn-cell-mono">m4.2x · 8 vCPU / 64 GiB</td>
+                <td class="mpn-cell-mono">—</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-num" data-value="0">2m</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr class="mpn-row-danger">
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select cache-01"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">cache-01</a></td>
+                <td data-value="failed"><span class="mpn-pill mpn-is-danger">failed</span></td>
+                <td class="mpn-cell-mono">b1.1x · 1 vCPU / 2 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.51</td>
+                <td class="mpn-cell-mono">node-jkt-03</td>
+                <td class="mpn-cell-num" data-value="0">6h</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select queue-03"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">queue-03</a></td>
+                <td data-value="draining"><span class="mpn-pill mpn-is-warn">draining</span></td>
+                <td class="mpn-cell-mono">c2.2x · 2 vCPU / 8 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.33</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-num" data-value="31">31d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select edge-01"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">edge-01</a></td>
+                <td data-value="running"><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">b1.2x · 2 vCPU / 4 GiB</td>
+                <td class="mpn-cell-mono">10.30.1.4</td>
+                <td class="mpn-cell-mono">node-sgp-01</td>
+                <td class="mpn-cell-num" data-value="92">92d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select batch-07"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">batch-07</a></td>
+                <td data-value="stopped"><span class="mpn-pill mpn-is-idle">stopped</span></td>
+                <td class="mpn-cell-mono">m4.1x · 4 vCPU / 32 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.62</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-num" data-value="3">3d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select api-04"></label></td>
+                <td class="mpn-cell-key"><a href="instance-detail.html">api-04</a></td>
+                <td data-value="degraded"><span class="mpn-pill mpn-is-info">degraded</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.24</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-num" data-value="8">8d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-menu="user-menu" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mpn-pager">
+          <span>Page <strong class="mpn-mono">1</strong> of <strong class="mpn-mono">4</strong></span>
+          <span class="mpn-spacer"></span>
+          <nav class="mpn-pagination">
+            <button class="mpn-page-btn" disabled><svg class="mpn-icon mpn-icon-sm"><use href="#i-chevrons-left"/></svg></button>
+            <button class="mpn-page-btn" aria-current="page">1</button>
+            <button class="mpn-page-btn">2</button>
+            <button class="mpn-page-btn">3</button>
+            <span class="mpn-page-gap">…</span>
+            <button class="mpn-page-btn">4</button>
+            <button class="mpn-page-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-chevrons-right"/></svg></button>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-palette" id="palette" hidden>
+  <input class="mpn-palette-field" placeholder="Type a command or search…" aria-label="Command palette">
+  <div class="mpn-palette-list">
+    <div class="mpn-palette-group">Actions</div>
+    <button class="mpn-palette-item" aria-selected="true"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create instance</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-camera"/></svg>Take snapshot</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export instance list</button>
+    <div class="mpn-palette-group">Go to</div>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-server"/></svg>Instances</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-shield"/></svg>Audit log</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Settings</button>
+  </div>
+</div>
+
+<div class="mpn-menu" id="user-menu" hidden>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-user"/></svg>Profile</button>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Preferences</button>
+  <button class="mpn-menu-item" data-mpn-dir-toggle><svg class="mpn-icon mpn-icon-sm"><use href="#i-code"/></svg>Flip direction (RTL)</button>
+  <div class="mpn-menu-sep"></div>
+  <button class="mpn-menu-item is-danger"><svg class="mpn-icon mpn-icon-sm"><use href="#i-log-out"/></svg>Sign out</button>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

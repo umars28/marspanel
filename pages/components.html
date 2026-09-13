@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+    <div class="mpn-nav-label">Pages</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="components.html" aria-current="page"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="login.html"><svg class="mpn-icon"><use href="#i-log-in"/></svg><span>Sign in</span></a>
+    <a class="mpn-nav-item" href="404.html"><svg class="mpn-icon"><use href="#i-alert-circle"/></svg><span>Error state</span></a>
+    <div class="mpn-nav-label">Sections</div>
+    <a class="mpn-nav-item" href="#buttons"><svg class="mpn-icon"><use href="#i-command"/></svg><span>Actions</span></a>
+    <a class="mpn-nav-item" href="#data"><svg class="mpn-icon"><use href="#i-table"/></svg><span>Data</span></a>
+    <a class="mpn-nav-item" href="#charts"><svg class="mpn-icon"><use href="#i-bar-chart"/></svg><span>Charts</span></a>
+    <a class="mpn-nav-item" href="#forms"><svg class="mpn-icon"><use href="#i-edit"/></svg><span>Forms</span></a>
+    <a class="mpn-nav-item" href="#work"><svg class="mpn-icon"><use href="#i-calendar"/></svg><span>Workspace</span></a>
+    <a class="mpn-nav-item" href="#states"><svg class="mpn-icon"><use href="#i-image"/></svg><span>Empty states</span></a>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <nav class="mpn-crumbs">
+        <a href="dashboard.html">marspanel</a><span class="mpn-crumb-sep">/</span><span>Components</span>
+      </nav>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-open="palette" aria-label="Command palette"><svg class="mpn-icon"><use href="#i-search"/></svg></button>
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <div class="mpn-avatar">UM</div>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Reference</div>
+          <h1 class="mpn-page-title">Components</h1>
+          <p class="mpn-page-sub">Every class in the library, rendered in both themes.</p>
+        </div>
+      </div>
+
+      <section class="mpn-card" id="buttons">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Buttons</h2></div>
+        <div class="mpn-card-body mpn-stack">
+          <div class="mpn-row">
+            <button class="mpn-btn mpn-btn-primary"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Primary</button>
+            <button class="mpn-btn mpn-btn-solid">Solid</button>
+            <button class="mpn-btn">Default</button>
+            <button class="mpn-btn mpn-btn-ghost">Ghost</button>
+            <button class="mpn-btn mpn-btn-danger"><svg class="mpn-icon mpn-icon-sm"><use href="#i-trash"/></svg>Danger</button>
+            <button class="mpn-btn" disabled>Disabled</button>
+          </div>
+          <div class="mpn-row">
+            <button class="mpn-btn mpn-btn-sm">Small</button>
+            <button class="mpn-btn">Default</button>
+            <button class="mpn-btn mpn-btn-lg">Large</button>
+            <span class="mpn-btn-group">
+              <button class="mpn-btn mpn-btn-sm" aria-pressed="true">Grid</button>
+              <button class="mpn-btn mpn-btn-sm" aria-pressed="false">List</button>
+              <button class="mpn-btn mpn-btn-sm" aria-pressed="false">Tree</button>
+            </span>
+            <button class="mpn-icon-btn"><svg class="mpn-icon"><use href="#i-settings"/></svg></button>
+            <button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon"><use href="#i-more"/></svg></button>
+            <span class="mpn-spinner"></span>
+            <span class="mpn-dots"><i></i><i></i><i></i></span>
+          </div>
+          <div class="mpn-row">
+            <span class="mpn-pill mpn-is-ok">ok</span>
+            <span class="mpn-pill mpn-is-warn">warn</span>
+            <span class="mpn-pill mpn-is-danger">danger</span>
+            <span class="mpn-pill mpn-is-info">info</span>
+            <span class="mpn-pill mpn-is-pending">pending</span>
+            <span class="mpn-pill mpn-is-idle">idle</span>
+            <span class="mpn-tag">sha256:9f2ae41c</span>
+            <span class="mpn-chip">region: jkt-01</span>
+            <span class="mpn-chip" aria-pressed="true">state: running</span>
+            <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>production</span>
+            <kbd class="mpn-kbd">⌘K</kbd>
+          </div>
+          <div class="mpn-row">
+            <div class="mpn-avatar-group">
+              <span class="mpn-avatar">UM</span><span class="mpn-avatar">RA</span><span class="mpn-avatar">KD</span><span class="mpn-avatar">+7</span>
+            </div>
+            <button class="mpn-btn mpn-btn-sm" data-mpn-menu="demo-menu">Dropdown <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+            <button class="mpn-btn mpn-btn-sm" data-mpn-open="demo-modal">Open modal</button>
+            <button class="mpn-btn mpn-btn-sm" data-mpn-open="demo-drawer">Open drawer</button>
+            <button class="mpn-btn mpn-btn-sm" data-mpn-open="palette">Command palette</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Banners and toasts</h2></div>
+        <div class="mpn-card-body mpn-stack">
+          <div class="mpn-banner mpn-is-info"><svg class="mpn-icon"><use href="#i-info"/></svg><span><span class="mpn-banner-title">Maintenance window</span> — node-jkt-03 reboots Sunday 02:00 UTC.</span></div>
+          <div class="mpn-banner mpn-is-warn"><svg class="mpn-icon"><use href="#i-alert-triangle"/></svg><span>Memory quota at <strong class="mpn-mono">92%</strong> — cluster is no longer N+1.</span><button class="mpn-btn mpn-btn-sm mpn-banner-act">Review</button></div>
+          <div class="mpn-banner mpn-is-danger"><svg class="mpn-icon"><use href="#i-x-circle"/></svg><span><strong class="mpn-mono">cache-01</strong> failed to start: image pull backoff.</span></div>
+          <div class="mpn-banner mpn-is-ok"><svg class="mpn-icon"><use href="#i-check-circle"/></svg><span>Snapshot <strong class="mpn-mono">snap-4471</strong> completed in 38s.</span></div>
+          <div class="mpn-progress"><span class="mpn-progress-fill" style="width:62%"></span></div>
+          <div class="mpn-progress mpn-progress-indeterminate"><span class="mpn-progress-fill"></span></div>
+        </div>
+      </section>
+
+      <section class="mpn-grid mpn-g-4">
+        <div class="mpn-card"><div class="mpn-card-body">
+          <div class="mpn-stat-label">Running</div>
+          <div class="mpn-stat-value">28<span class="mpn-stat-unit">/32</span></div>
+          <div class="mpn-stat-meta"><span class="mpn-delta mpn-delta-up">▲ 2</span> since yesterday</div>
+        </div></div>
+        <div class="mpn-card mpn-card-state mpn-is-warn"><div class="mpn-infobox">
+          <span class="mpn-infobox-mark is-state"><svg class="mpn-icon mpn-icon-lg"><use href="#i-hard-drive"/></svg></span>
+          <div class="mpn-infobox-body"><div class="mpn-stat-label">Memory</div><div class="mpn-stat-value">92%</div></div>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-infobox">
+          <span class="mpn-infobox-mark"><svg class="mpn-icon mpn-icon-lg"><use href="#i-dollar"/></svg></span>
+          <div class="mpn-infobox-body"><div class="mpn-stat-label">Spend</div><div class="mpn-stat-value">$12,480</div></div>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-card-body">
+          <div class="mpn-stat-label">Loading</div>
+          <div class="mpn-skeleton" style="width:70%;height:20px;margin:12px 0 8px"></div>
+          <div class="mpn-skeleton" style="width:45%"></div>
+        </div></div>
+      </section>
+
+      <section class="mpn-grid mpn-g-split" id="charts">
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Area and bars</h2></div>
+          <div class="mpn-card-body">
+            <svg class="mpn-chart mpn-chart-sm" viewBox="0 0 600 120" preserveAspectRatio="none">
+              <defs><linearGradient id="mpn-f2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--mpn-accent)" stop-opacity=".3"/><stop offset="100%" stop-color="var(--mpn-accent)" stop-opacity="0"/></linearGradient></defs>
+              <g class="mpn-chart-grid"><line x1="0" y1="30" x2="600" y2="30"/><line x1="0" y1="60" x2="600" y2="60"/><line x1="0" y1="90" x2="600" y2="90"/></g>
+              <path class="mpn-chart-area" fill="url(#mpn-f2)" d="M0 88 L50 78 L100 84 L150 62 L200 70 L250 48 L300 55 L350 36 L400 44 L450 28 L500 34 L550 20 L600 26 L600 120 L0 120 Z"/>
+              <path class="mpn-chart-line" d="M0 88 L50 78 L100 84 L150 62 L200 70 L250 48 L300 55 L350 36 L400 44 L450 28 L500 34 L550 20 L600 26"/>
+              <path class="mpn-chart-line mpn-chart-line-2" d="M0 104 L50 98 L100 100 L150 88 L200 92 L250 80 L300 86 L350 72 L400 78 L450 66 L500 70 L550 58 L600 64"/>
+            </svg>
+            <div class="mpn-bars" style="margin-top:16px">
+              <i style="height:32%"></i><i style="height:48%"></i><i style="height:41%"></i><i style="height:64%"></i>
+              <i style="height:56%"></i><i style="height:78%"></i><i style="height:70%"></i><i class="is-peak" style="height:100%"></i>
+              <i style="height:84%"></i><i style="height:66%"></i><i style="height:74%"></i><i style="height:52%"></i>
+            </div>
+          </div>
+          <div class="mpn-legend">
+            <span class="mpn-legend-item"><i class="mpn-legend-swatch"></i>ingress</span>
+            <span class="mpn-legend-item"><i class="mpn-legend-swatch" style="background:var(--mpn-cyan-400)"></i>egress</span>
+          </div>
+        </div>
+
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Donut, gauge, meters</h2></div>
+          <div class="mpn-card-body mpn-stack">
+            <div class="mpn-row" style="gap:24px;justify-content:center">
+              <span class="mpn-donut-wrap">
+                <svg class="mpn-donut" viewBox="0 0 132 132">
+                  <circle class="mpn-donut-track" cx="66" cy="66" r="54"/>
+                  <circle class="mpn-donut-seg mpn-is-ok" cx="66" cy="66" r="54" stroke-dasharray="230 340"/>
+                </svg>
+                <span class="mpn-donut-center"><span class="mpn-donut-value">68%</span><br><span class="mpn-donut-label">healthy</span></span>
+              </span>
+              <svg class="mpn-gauge" viewBox="0 0 160 92">
+                <path class="mpn-gauge-track" d="M16 80 A64 64 0 0 1 144 80"/>
+                <path class="mpn-gauge-fill mpn-is-warn" d="M16 80 A64 64 0 0 1 144 80" stroke-dasharray="125 201"/>
+              </svg>
+            </div>
+            <div class="mpn-stack-bar">
+              <span class="mpn-stack-seg mpn-is-ok" style="width:62%"></span>
+              <span class="mpn-stack-seg mpn-is-pending" style="width:14%"></span>
+              <span class="mpn-stack-seg mpn-is-danger" style="width:9%"></span>
+            </div>
+            <div>
+              <div class="mpn-meter-row"><span>node-jkt-01</span><span class="mpn-meter"><span class="mpn-meter-fill" style="width:74%"></span></span><output>74%</output></div>
+              <div class="mpn-meter-row"><span>node-jkt-02</span><span class="mpn-meter"><span class="mpn-meter-fill" style="width:58%"></span></span><output>58%</output></div>
+              <div class="mpn-meter-row"><span>node-jkt-03</span><span class="mpn-meter"><span class="mpn-meter-fill is-danger" style="width:96%"></span></span><output>96%</output></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card" id="data">
+        <div class="mpn-card-head">
+          <h2 class="mpn-card-title">Table variants</h2>
+          <span class="mpn-card-act mpn-mono">striped · bordered · compact</span>
+        </div>
+        <div class="mpn-table-wrap">
+          <table class="mpn-table mpn-table-striped mpn-table-compact mpn-table-stack">
+            <thead><tr><th>Name</th><th>State</th><th>Shape</th><th>Node</th><th class="mpn-cell-num">Age</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Name" class="mpn-cell-key">web-01</td><td data-label="State"><span class="mpn-pill mpn-is-ok">running</span></td><td data-label="Shape" class="mpn-cell-mono">c2.4x</td><td data-label="Node" class="mpn-cell-mono">node-jkt-01</td><td data-label="Age" class="mpn-cell-num">14d</td></tr>
+              <tr><td data-label="Name" class="mpn-cell-key">db-02</td><td data-label="State"><span class="mpn-pill mpn-is-pending">provisioning</span></td><td data-label="Shape" class="mpn-cell-mono">m4.2x</td><td data-label="Node" class="mpn-cell-mono">node-jkt-01</td><td data-label="Age" class="mpn-cell-num">2m</td></tr>
+              <tr class="mpn-row-danger"><td data-label="Name" class="mpn-cell-key">cache-01</td><td data-label="State"><span class="mpn-pill mpn-is-danger">failed</span></td><td data-label="Shape" class="mpn-cell-mono">b1.1x</td><td data-label="Node" class="mpn-cell-mono">node-jkt-03</td><td data-label="Age" class="mpn-cell-num">6h</td></tr>
+              <tr><td data-label="Name" class="mpn-cell-key">queue-03</td><td data-label="State"><span class="mpn-pill mpn-is-warn">draining</span></td><td data-label="Shape" class="mpn-cell-mono">c2.2x</td><td data-label="Node" class="mpn-cell-mono">node-jkt-02</td><td data-label="Age" class="mpn-cell-num">31d</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mpn-pager">
+          <span>Page <strong class="mpn-mono">2</strong> of <strong class="mpn-mono">9</strong></span>
+          <span class="mpn-spacer"></span>
+          <nav class="mpn-pagination">
+            <button class="mpn-page-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-chevrons-left"/></svg></button>
+            <button class="mpn-page-btn">1</button>
+            <button class="mpn-page-btn" aria-current="page">2</button>
+            <button class="mpn-page-btn">3</button>
+            <span class="mpn-page-gap">…</span>
+            <button class="mpn-page-btn">9</button>
+            <button class="mpn-page-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-chevrons-right"/></svg></button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="mpn-grid mpn-g-split">
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Lists and media</h2></div>
+          <div class="mpn-list">
+            <div class="mpn-list-item">
+              <span class="mpn-media-thumb is-accent"><svg class="mpn-icon"><use href="#i-package"/></svg></span>
+              <div class="mpn-list-body"><div class="mpn-list-title">registry.marspanel.dev/api</div><div class="mpn-list-sub">12 tags · 4.2 GiB</div></div>
+              <div class="mpn-list-end"><span class="mpn-pill mpn-is-ok">signed</span></div>
+            </div>
+            <div class="mpn-list-item">
+              <span class="mpn-media-thumb mpn-is-warn is-state"><svg class="mpn-icon"><use href="#i-key"/></svg></span>
+              <div class="mpn-list-body"><div class="mpn-list-title">ci-deploy-key</div><div class="mpn-list-sub">No expiry set</div></div>
+              <div class="mpn-list-end"><button class="mpn-btn mpn-btn-sm">Rotate</button></div>
+            </div>
+            <div class="mpn-list-item">
+              <span class="mpn-avatar">RA</span>
+              <div class="mpn-list-body"><div class="mpn-list-title">Rania</div><div class="mpn-list-sub">Owner · last seen 4m ago</div></div>
+              <div class="mpn-list-end"><span class="mpn-dot mpn-is-ok"></span></div>
+            </div>
+          </div>
+          <div class="mpn-card-body mpn-stack">
+            <div class="mpn-file-row"><svg class="mpn-icon"><use href="#i-file-text"/></svg><span class="mpn-file-name">cluster-backup-2026-09-14.tar.zst</span><span class="mpn-file-size">1.8 GiB</span></div>
+            <div class="mpn-comment">
+              <span class="mpn-avatar">KD</span>
+              <div>
+                <div class="mpn-comment-head"><span class="mpn-comment-author">Kadek</span><span class="mpn-comment-time">09:41</span></div>
+                <div class="mpn-comment-body">Readiness probe timeout is 1s but the app takes 1.4s to warm. That is the whole bug.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Disclosure and steps</h2></div>
+          <div class="mpn-card-body">
+            <div class="mpn-stepper">
+              <span class="mpn-step" data-done><span class="mpn-step-num"><svg class="mpn-icon mpn-icon-sm"><use href="#i-check"/></svg></span>Image</span>
+              <span class="mpn-step-sep"></span>
+              <span class="mpn-step" aria-current="step"><span class="mpn-step-num">2</span>Shape</span>
+              <span class="mpn-step-sep"></span>
+              <span class="mpn-step"><span class="mpn-step-num">3</span>Network</span>
+            </div>
+          </div>
+          <div class="mpn-accordion">
+            <details open>
+              <summary class="mpn-summary">Why did this instance restart?</summary>
+              <div class="mpn-accordion-body">The liveness probe failed three consecutive times. Liveness restarts the container; readiness would only have pulled it from rotation.</div>
+            </details>
+            <details>
+              <summary class="mpn-summary">Is a snapshot a backup?</summary>
+              <div class="mpn-accordion-body">No. A snapshot is copy-on-write on the same node and dies with it. A backup lives in object storage and survives node loss.</div>
+            </details>
+            <details>
+              <summary class="mpn-summary">What counts as N+1?</summary>
+              <div class="mpn-accordion-body">Every workload still fits after losing any single node. At 92% memory quota this cluster no longer does.</div>
+            </details>
+          </div>
+          <div class="mpn-card-body">
+            <div class="mpn-tabs" data-mpn-tabs>
+              <a class="mpn-tab" role="tab" aria-selected="true" aria-controls="tp-1" href="#">Overview</a>
+              <a class="mpn-tab" role="tab" aria-selected="false" aria-controls="tp-2" href="#">Logs</a>
+              <a class="mpn-tab" role="tab" aria-selected="false" aria-controls="tp-3" href="#">Timeline</a>
+            </div>
+            <div id="tp-1" style="padding-top:14px">
+              <dl class="mpn-kv">
+                <dt>Instance ID</dt><dd>i-9f2ae41c7b03d8</dd>
+                <dt>Image digest</dt><dd>sha256:9f2ae41c7b03d8</dd>
+                <dt>Private address</dt><dd>10.20.4.17/22</dd>
+                <dt>Created</dt><dd>2026-08-31 09:14 UTC</dd>
+              </dl>
+            </div>
+            <div id="tp-2" hidden style="padding-top:14px">
+              <div class="mpn-log">
+                <div class="mpn-log-line mpn-is-idle"><span class="mpn-log-time">09:12:01</span><span class="mpn-log-level">INFO</span><span class="mpn-log-msg">listening on 0.0.0.0:8080</span></div>
+                <div class="mpn-log-line mpn-is-warn"><span class="mpn-log-time">09:12:44</span><span class="mpn-log-level">WARN</span><span class="mpn-log-msg">readiness probe exceeded 1s budget (1.41s)</span></div>
+                <div class="mpn-log-line mpn-is-danger"><span class="mpn-log-time">09:13:02</span><span class="mpn-log-level">ERROR</span><span class="mpn-log-msg">removed from load balancer rotation</span></div>
+              </div>
+            </div>
+            <div id="tp-3" hidden style="padding-top:14px">
+              <div class="mpn-timeline">
+                <div class="mpn-timeline-item mpn-is-ok"><strong class="mpn-mono">09:02</strong> — scheduled onto node-jkt-02</div>
+                <div class="mpn-timeline-item mpn-is-pending"><strong class="mpn-mono">09:04</strong> — pulling image</div>
+                <div class="mpn-timeline-item mpn-is-warn"><strong class="mpn-mono">09:12</strong> — readiness degraded</div>
+                <div class="mpn-timeline-item mpn-is-danger"><strong class="mpn-mono">09:13</strong> — removed from rotation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card" id="forms">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Forms</h2></div>
+        <div class="mpn-card-body mpn-grid mpn-g-2">
+          <div class="mpn-stack">
+            <div class="mpn-field">
+              <label class="mpn-label" for="c-name">Instance name</label>
+              <input class="mpn-input mpn-input-mono" id="c-name" value="web-03">
+              <span class="mpn-hint">Lowercase letters, digits and hyphens.</span>
+            </div>
+            <div class="mpn-field is-invalid">
+              <label class="mpn-label" for="c-bad">Hostname</label>
+              <input class="mpn-input mpn-input-mono" id="c-bad" value="Web_03" aria-invalid="true">
+              <span class="mpn-error">Underscores and capitals are not valid in a hostname.</span>
+            </div>
+            <div class="mpn-field">
+              <label class="mpn-label" for="c-domain">Endpoint</label>
+              <div class="mpn-addon">
+                <span class="mpn-addon-text">https://</span>
+                <input class="mpn-input mpn-input-mono" id="c-domain" value="api.jkt-01">
+                <span class="mpn-addon-text">.marspanel.dev</span>
+              </div>
+            </div>
+            <div class="mpn-field">
+              <label class="mpn-label" for="c-shape">Shape</label>
+              <select class="mpn-select" id="c-shape">
+                <option>b1.1x · 1 vCPU / 2 GiB</option>
+                <option selected>c2.4x · 4 vCPU / 16 GiB</option>
+                <option>m4.2x · 8 vCPU / 64 GiB</option>
+              </select>
+            </div>
+            <div class="mpn-field">
+              <div class="mpn-row"><label class="mpn-label" for="c-note">Description</label><span class="mpn-counter">42 / 240</span></div>
+              <textarea class="mpn-textarea" id="c-note">Frontend fleet, behind lb-public-01.</textarea>
+            </div>
+            <div class="mpn-field">
+              <label class="mpn-label" for="c-cpu">CPU limit</label>
+              <input class="mpn-range" id="c-cpu" type="range" value="62">
+            </div>
+          </div>
+
+          <div class="mpn-stack">
+            <div class="mpn-field">
+              <span class="mpn-label">Labels</span>
+              <div class="mpn-tags">
+                <span class="mpn-tag">tier=frontend</span>
+                <span class="mpn-tag">env=prod</span>
+                <input placeholder="Add label…">
+              </div>
+            </div>
+            <div class="mpn-field">
+              <span class="mpn-label">Placement</span>
+              <div class="mpn-choice-grid">
+                <label class="mpn-choice"><input type="radio" name="p" class="mpn-sr" checked><div><div class="mpn-label">Automatic</div><div class="mpn-hint">Most free memory wins.</div></div></label>
+                <label class="mpn-choice"><input type="radio" name="p" class="mpn-sr"><div><div class="mpn-label">Pin to node</div><div class="mpn-hint">Never rescheduled.</div></div></label>
+              </div>
+            </div>
+            <div class="mpn-row">
+              <label class="mpn-check"><input type="checkbox" checked> Nightly snapshots</label>
+              <label class="mpn-check"><input type="checkbox"> Public address</label>
+              <label class="mpn-check"><input type="checkbox" class="mpn-switch" checked> Monitoring</label>
+            </div>
+            <div class="mpn-field">
+              <span class="mpn-label">Cloud-init</span>
+              <label class="mpn-drop">
+                <svg class="mpn-icon mpn-icon-lg"><use href="#i-upload"/></svg>
+                <span>Drop a file here or click to browse</span>
+                <span class="mpn-hint mpn-mono">YAML, max 64 KiB</span>
+              </label>
+            </div>
+            <div class="mpn-field">
+              <span class="mpn-label">Verification code</span>
+              <div class="mpn-otp"><input value="4" maxlength="1"><input value="1" maxlength="1"><input value="8" maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mpn-card-foot">
+          <span class="mpn-hint">Estimated <strong class="mpn-mono">$74.20</strong>/month</span>
+          <span class="mpn-spacer"></span>
+          <button class="mpn-btn">Cancel</button>
+          <button class="mpn-btn mpn-btn-primary">Create instance</button>
+        </div>
+      </section>
+
+      <section class="mpn-grid mpn-g-split">
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Terminal and diff</h2></div>
+          <div class="mpn-card-body mpn-stack">
+            <div class="mpn-term">
+              <div class="mpn-term-bar"><span class="mpn-dot mpn-is-ok"></span>node-jkt-01 · exec</div>
+              <div class="mpn-term-body"><span class="mpn-tok-prompt">$</span> marspanel instance list --state failed
+NAME       NODE          AGE   REASON
+cache-01   node-jkt-03   6h    ImagePullBackOff
+
+<span class="mpn-tok-prompt">$</span> </div>
+            </div>
+            <pre class="mpn-code"><span class="mpn-tok-key">readinessProbe</span>:
+  <span class="mpn-tok-key">httpGet</span>: { <span class="mpn-tok-key">path</span>: <span class="mpn-tok-str">/healthz</span>, <span class="mpn-tok-key">port</span>: <span class="mpn-tok-num">8080</span> }
+  <span class="mpn-tok-key">timeoutSeconds</span>: <span class="mpn-tok-num">1</span>  <span class="mpn-tok-dim"># too tight</span></pre>
+            <div class="mpn-diff">
+              <div class="mpn-diff-line"><span class="mpn-diff-num">14</span><span>  timeoutSeconds: 1</span></div>
+              <div class="mpn-diff-line is-del"><span class="mpn-diff-num">15</span><span>- failureThreshold: 1</span></div>
+              <div class="mpn-diff-line is-add"><span class="mpn-diff-num">15</span><span>+ failureThreshold: 3</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Topology</h2></div>
+          <div class="mpn-topo">
+            <div class="mpn-topo-row">
+              <div class="mpn-topo-node"><span class="mpn-topo-name">lb-public-01</span><span class="mpn-topo-sub">203.0.113.10</span></div>
+              <span class="mpn-topo-arrow"></span>
+              <div class="mpn-topo-node"><span class="mpn-topo-name">web-01</span><span class="mpn-topo-sub">in rotation</span></div>
+            </div>
+            <div class="mpn-topo-row">
+              <span style="width:164px"></span>
+              <div class="mpn-topo-node mpn-is-danger is-state"><span class="mpn-topo-name">api-04</span><span class="mpn-topo-sub">removed · readiness</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card" id="work">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Board</h2></div>
+        <div class="mpn-board">
+          <div class="mpn-board-col">
+            <div class="mpn-board-head"><span class="mpn-board-title">Triage</span><span class="mpn-board-count">3</span></div>
+            <div class="mpn-board-card"><span class="mpn-board-card-title">cache-01 image pull backoff</span><div class="mpn-board-meta"><span class="mpn-pill mpn-is-danger">p1</span><span class="mpn-mono">6h</span></div></div>
+            <div class="mpn-board-card"><span class="mpn-board-card-title">Bucket quota alert is noisy</span><div class="mpn-board-meta"><span class="mpn-pill mpn-is-idle">p3</span><span class="mpn-mono">2d</span></div></div>
+            <div class="mpn-board-drop"></div>
+          </div>
+          <div class="mpn-board-col">
+            <div class="mpn-board-head"><span class="mpn-board-title">In progress</span><span class="mpn-board-count">2</span></div>
+            <div class="mpn-board-card"><span class="mpn-board-card-title">Raise readiness failureThreshold</span><div class="mpn-board-meta"><span class="mpn-pill mpn-is-warn">p2</span><span class="mpn-avatar" style="width:20px;height:20px;font-size:9px">KD</span></div></div>
+          </div>
+          <div class="mpn-board-col">
+            <div class="mpn-board-head"><span class="mpn-board-title">Done</span><span class="mpn-board-count">7</span></div>
+            <div class="mpn-board-card"><span class="mpn-board-card-title">Add N+1 capacity check</span><div class="mpn-board-meta"><span class="mpn-pill mpn-is-ok">shipped</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-cal">
+          <div class="mpn-cal-head">
+            <button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon"><use href="#i-chevron-left"/></svg></button>
+            <span class="mpn-cal-month">September 2026</span>
+            <button class="mpn-icon-btn mpn-icon-btn-bare"><svg class="mpn-icon"><use href="#i-chevron-right"/></svg></button>
+            <span class="mpn-spacer"></span>
+            <button class="mpn-btn mpn-btn-sm">Today</button>
+          </div>
+          <div class="mpn-cal-grid">
+            <div class="mpn-cal-dow">Mon</div><div class="mpn-cal-dow">Tue</div><div class="mpn-cal-dow">Wed</div><div class="mpn-cal-dow">Thu</div><div class="mpn-cal-dow">Fri</div><div class="mpn-cal-dow">Sat</div><div class="mpn-cal-dow">Sun</div>
+            <div class="mpn-cal-day is-outside"><span class="mpn-cal-num">31</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">1</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">2</span><span class="mpn-cal-event mpn-is-info">Patch window</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">3</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">4</span><span class="mpn-cal-event mpn-is-ok">Backup verified</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">5</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">6</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">7</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">8</span><span class="mpn-cal-event mpn-is-warn">Cert expires</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">9</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">10</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">11</span><span class="mpn-cal-event mpn-is-pending">Migration</span><span class="mpn-cal-more">+2 more</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">12</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">13</span></div>
+            <div class="mpn-cal-day is-today"><span class="mpn-cal-num">14</span><span class="mpn-cal-event mpn-is-danger">cache-01 down</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">15</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">16</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">17</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">18</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">19</span></div>
+            <div class="mpn-cal-day"><span class="mpn-cal-num">20</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-chat">
+          <div class="mpn-chat-aside">
+            <div class="mpn-chat-thread" aria-selected="true">
+              <span class="mpn-avatar">KD</span>
+              <div class="mpn-chat-thread-body"><div class="mpn-chat-thread-name">Kadek</div><div class="mpn-chat-thread-last">That is the whole bug.</div></div>
+            </div>
+            <div class="mpn-chat-thread">
+              <span class="mpn-avatar">RA</span>
+              <div class="mpn-chat-thread-body"><div class="mpn-chat-thread-name">Rania</div><div class="mpn-chat-thread-last">Quota bumped, try again.</div></div>
+            </div>
+            <div class="mpn-chat-thread">
+              <span class="mpn-avatar">#</span>
+              <div class="mpn-chat-thread-body"><div class="mpn-chat-thread-name">#incidents</div><div class="mpn-chat-thread-last">cache-01 is still failing.</div></div>
+            </div>
+          </div>
+          <div class="mpn-chat-main">
+            <div class="mpn-chat-head"><span class="mpn-avatar">KD</span><strong>Kadek</strong><span class="mpn-hint">typing</span><span class="mpn-dots"><i></i><i></i><i></i></span></div>
+            <div class="mpn-chat-log">
+              <span class="mpn-chat-day">Today</span>
+              <div class="mpn-msg"><span class="mpn-avatar">KD</span><div><div class="mpn-msg-bubble">Readiness timeout is 1s but warmup takes 1.4s.</div><div class="mpn-msg-time">09:41</div></div></div>
+              <div class="mpn-msg mpn-msg-self"><div><div class="mpn-msg-bubble">So it never passes. Raising failureThreshold to 3.</div><div class="mpn-msg-time">09:43</div></div></div>
+              <div class="mpn-msg"><span class="mpn-avatar">KD</span><div><div class="mpn-msg-bubble">That is the whole bug.</div><div class="mpn-msg-time">09:44</div></div></div>
+            </div>
+            <div class="mpn-chat-compose">
+              <input class="mpn-input" placeholder="Write a message…">
+              <button class="mpn-btn mpn-btn-primary"><svg class="mpn-icon mpn-icon-sm"><use href="#i-send"/></svg>Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mpn-grid mpn-g-3" id="states">
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-empty"/></svg>
+          <div class="mpn-empty-title">No snapshots yet</div>
+          <p>Snapshots are copy-on-write and live on the same node.</p>
+          <button class="mpn-btn mpn-btn-primary mpn-btn-sm">Take snapshot</button>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-no-results"/></svg>
+          <div class="mpn-empty-title">No matches</div>
+          <p>Nothing matched <span class="mpn-code-inline">state=failed</span> in this region.</p>
+          <button class="mpn-btn mpn-btn-sm">Clear filters</button>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-403"/></svg>
+          <div class="mpn-empty-title">Not permitted</div>
+          <p>Your role <span class="mpn-code-inline">viewer</span> cannot delete instances.</p>
+          <button class="mpn-btn mpn-btn-sm">Request access</button>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-offline"/></svg>
+          <div class="mpn-empty-title">Control plane unreachable</div>
+          <p>Last successful poll 4 minutes ago.</p>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-upload"/></svg>
+          <div class="mpn-empty-title">Upload an image</div>
+          <p>Raw, qcow2 and OCI archives are accepted.</p>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il"><use href="#il-success"/></svg>
+          <div class="mpn-empty-title">Restore complete</div>
+          <p>All 14 volumes verified against their checksums.</p>
+        </div></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-menu" id="demo-menu" hidden style="right:32px;top:120px">
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-edit"/></svg>Rename</button>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-copy"/></svg>Duplicate</button>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-archive"/></svg>Archive</button>
+  <div class="mpn-menu-sep"></div>
+  <button class="mpn-menu-item is-danger"><svg class="mpn-icon mpn-icon-sm"><use href="#i-trash"/></svg>Delete</button>
+</div>
+
+<div class="mpn-modal" id="demo-modal" hidden role="dialog" aria-modal="true" aria-labelledby="dm-title">
+  <div class="mpn-overlay-head">
+    <span class="mpn-media-thumb mpn-is-danger is-state"><svg class="mpn-icon"><use href="#i-alert-triangle"/></svg></span>
+    <h2 class="mpn-overlay-title" id="dm-title">Delete cache-01?</h2>
+  </div>
+  <div class="mpn-overlay-body">
+    <p class="mpn-muted">This detaches 2 volumes and releases <span class="mpn-code-inline">10.20.4.51</span>. Snapshots taken from this instance are not deleted.</p>
+    <div class="mpn-field" style="margin-top:16px">
+      <label class="mpn-label" for="dm-confirm">Type <span class="mpn-code-inline">cache-01</span> to confirm</label>
+      <input class="mpn-input mpn-input-mono" id="dm-confirm" placeholder="cache-01">
+    </div>
+  </div>
+  <div class="mpn-overlay-foot">
+    <span class="mpn-spacer"></span>
+    <button class="mpn-btn" data-mpn-close>Cancel</button>
+    <button class="mpn-btn mpn-btn-danger">Delete instance</button>
+  </div>
+</div>
+
+<div class="mpn-drawer" id="demo-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dd-title">
+  <div class="mpn-overlay-head">
+    <h2 class="mpn-overlay-title" id="dd-title">web-01</h2>
+    <span class="mpn-pill mpn-is-ok">running</span>
+    <button class="mpn-icon-btn mpn-icon-btn-bare mpn-spacer" data-mpn-close aria-label="Close"><svg class="mpn-icon"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="mpn-overlay-body mpn-stack">
+    <dl class="mpn-kv">
+      <dt>Shape</dt><dd>c2.4x · 4 vCPU / 16 GiB</dd>
+      <dt>Node</dt><dd>node-jkt-01</dd>
+      <dt>Address</dt><dd>10.20.4.17/22</dd>
+      <dt>Image</dt><dd>sha256:9f2ae41c7b03d8</dd>
+      <dt>Age</dt><dd>14d 3h</dd>
+    </dl>
+    <div class="mpn-meter-row"><span>CPU</span><span class="mpn-meter"><span class="mpn-meter-fill" style="width:41%"></span></span><output>41%</output></div>
+    <div class="mpn-meter-row"><span>Memory</span><span class="mpn-meter"><span class="mpn-meter-fill" style="width:77%"></span></span><output>77%</output></div>
+  </div>
+  <div class="mpn-overlay-foot">
+    <button class="mpn-btn mpn-btn-sm">Restart</button>
+    <button class="mpn-btn mpn-btn-sm">Snapshot</button>
+    <span class="mpn-spacer"></span>
+    <button class="mpn-btn mpn-btn-sm mpn-btn-danger">Stop</button>
+  </div>
+</div>
+
+<div class="mpn-palette" id="palette" hidden>
+  <input class="mpn-palette-field" placeholder="Type a command or search…" aria-label="Command palette">
+  <div class="mpn-palette-list">
+    <div class="mpn-palette-group">Actions</div>
+    <button class="mpn-palette-item" aria-selected="true"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create instance</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-camera"/></svg>Take snapshot</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export instance list</button>
+    <div class="mpn-palette-group">Go to</div>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-server"/></svg>Instances</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-share"/></svg>Load balancers</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-file-text"/></svg>Audit log</button>
+  </div>
+</div>
+
+<div class="mpn-toasts">
+  <div class="mpn-toast"><svg class="mpn-icon mpn-is-ok" style="color:var(--mpn-ok)"><use href="#i-check-circle"/></svg><div><strong>Snapshot queued</strong><div class="mpn-hint">snap-4471 · web-01</div></div></div>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

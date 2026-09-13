@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand"><div class="mpn-brand-mark">M</div><div class="mpn-brand-name">marspanel</div></div>
+    <div class="mpn-nav-label">Pages</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="login.html"><svg class="mpn-icon"><use href="#i-log-in"/></svg><span>Sign in</span></a>
+    <a class="mpn-nav-item" href="404.html" aria-current="page"><svg class="mpn-icon"><use href="#i-alert-circle"/></svg><span>Error state</span></a>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <nav class="mpn-crumbs"><a href="dashboard.html">marspanel</a><span class="mpn-crumb-sep">/</span><span>Not found</span></nav>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <div class="mpn-avatar">UM</div>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-state-page">
+        <svg class="mpn-il mpn-il-lg"><use href="#il-404"/></svg>
+        <div class="mpn-state-code">error 404</div>
+        <h1 class="mpn-state-title">That resource is not here</h1>
+        <p class="mpn-state-body">
+          The instance <span class="mpn-code-inline">i-9f2ae41c7b03d8</span> was deleted 3 days ago,
+          or it lives in a region this project cannot see.
+        </p>
+        <div class="mpn-row" style="justify-content:center">
+          <button class="mpn-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-arrow-left"/></svg>Go back</button>
+          <a class="mpn-btn mpn-btn-primary" href="dashboard.html"><svg class="mpn-icon mpn-icon-sm"><use href="#i-grid"/></svg>Dashboard</a>
+        </div>
+      </div>
+
+      <section class="mpn-grid mpn-g-3">
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il mpn-il-sm"><use href="#il-500"/></svg>
+          <div class="mpn-empty-title">500 — control plane error</div>
+          <p>The scheduler returned an error. The incident is already open.</p>
+          <span class="mpn-tag">req-4f21c9</span>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il mpn-il-sm"><use href="#il-403"/></svg>
+          <div class="mpn-empty-title">403 — not permitted</div>
+          <p>Role <span class="mpn-code-inline">viewer</span> cannot read audit events.</p>
+          <button class="mpn-btn mpn-btn-sm">Request access</button>
+        </div></div>
+        <div class="mpn-card"><div class="mpn-empty">
+          <svg class="mpn-il mpn-il-sm"><use href="#il-maintenance"/></svg>
+          <div class="mpn-empty-title">Scheduled maintenance</div>
+          <p>node-jkt-03 reboots Sunday 02:00 UTC. Workloads drain first.</p>
+        </div></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

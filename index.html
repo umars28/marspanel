@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>marspanel — admin template for infrastructure consoles</title>
+<meta name="description" content="Admin template for infrastructure consoles. Plain HTML, CSS and JavaScript. 38 pages, 342 classes, 141 icons, full RTL, zero runtime dependencies.">
+<meta property="og:title" content="marspanel">
+<meta property="og:description" content="Admin template for infrastructure consoles. No build step, no framework, no network requests.">
+<link rel="stylesheet" href="dist/marspanel.min.css">
+<script src="dist/marspanel-theme.js"></script>
+<style>
+.lp { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
+.lp-bar { display: flex; align-items: center; gap: 16px; padding: 22px 0 64px; }
+.lp-bar-end { margin-inline-start: auto; display: flex; align-items: center; gap: 10px; }
+.lp-hero { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 48px; align-items: center; }
+.lp-eyebrow { font-family: var(--mpn-font-mono); font-size: var(--mpn-fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: var(--mpn-fg-faint); }
+.lp-h1 { margin-top: 14px; font-size: clamp(34px, 5.4vw, 56px); font-weight: 700; line-height: 1.04; letter-spacing: -.035em; }
+.lp-lede { margin-top: 18px; max-width: 46ch; font-size: var(--mpn-fs-lg); line-height: 1.65; color: var(--mpn-fg-muted); }
+.lp-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.lp-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 1px; margin: 72px 0; background: var(--mpn-line); border: 1px solid var(--mpn-line); border-radius: var(--mpn-radius); overflow: hidden; }
+.lp-stat { padding: 20px 18px; background: var(--mpn-bg); }
+.lp-stat b { display: block; font-family: var(--mpn-font-mono); font-size: var(--mpn-fs-2xl); font-weight: 700; letter-spacing: -.03em; }
+.lp-stat span { font-size: var(--mpn-fs-xs); text-transform: uppercase; letter-spacing: .12em; color: var(--mpn-fg-faint); }
+.lp-h2 { font-size: var(--mpn-fs-2xl); font-weight: 700; letter-spacing: -.03em; }
+.lp-sub { margin-top: 10px; max-width: 60ch; color: var(--mpn-fg-muted); line-height: 1.7; }
+.lp-section { margin-top: 88px; }
+.lp-feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; margin-top: 32px; }
+.lp-feat { padding: 22px; border: 1px solid var(--mpn-border); border-radius: var(--mpn-radius); background: var(--mpn-bg-raised); backdrop-filter: blur(var(--mpn-blur)); }
+.lp-feat h3 { margin-top: 14px; font-size: var(--mpn-fs-md); font-weight: 600; letter-spacing: -.015em; }
+.lp-feat p { margin-top: 8px; font-size: var(--mpn-fs-base); line-height: 1.7; color: var(--mpn-fg-muted); }
+.lp-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: var(--mpn-radius-sm); background: var(--mpn-accent-tint); color: var(--mpn-accent); }
+.lp-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 8px; margin-top: 28px; }
+.lp-link { display: flex; flex-direction: column; gap: 3px; padding: 13px 15px; border: 1px solid var(--mpn-border); border-radius: var(--mpn-radius-sm); background: var(--mpn-bg-inset); }
+.lp-link:hover { border-color: var(--mpn-accent-line); background: var(--mpn-accent-tint); }
+.lp-link b { font-size: var(--mpn-fs-base); font-weight: 600; color: var(--mpn-fg); }
+.lp-link span { font-family: var(--mpn-font-mono); font-size: var(--mpn-fs-xs); color: var(--mpn-fg-faint); }
+.lp-foot { margin-top: 96px; padding-top: 28px; border-top: 1px solid var(--mpn-line); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; font-size: var(--mpn-fs-sm); color: var(--mpn-fg-faint); }
+@media (max-width: 880px) { .lp-hero { grid-template-columns: minmax(0,1fr); gap: 32px; } .lp-art { order: -1; } }
+</style>
+</head>
+<body class="mpn-root">
+<script src="dist/sprites.js"></script>
+
+<div class="lp">
+  <header class="lp-bar">
+    <div class="mpn-brand" style="padding:0">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+    <span class="mpn-tag">v0.1.0</span>
+    <div class="lp-bar-end">
+      <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Toggle theme" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+      <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Right-to-left" data-mpn-dir-toggle aria-label="Toggle direction"><svg class="mpn-icon"><use href="#i-code"/></svg></button>
+      <a class="mpn-btn mpn-btn-sm" href="https://github.com/umars28/marspanel">GitHub</a>
+    </div>
+  </header>
+
+  <section class="lp-hero">
+    <div>
+      <div class="lp-eyebrow">Admin template</div>
+      <h1 class="lp-h1">Built for the screen where something has gone wrong.</h1>
+      <p class="lp-lede">
+        Every admin template draws the happy path. Dashboards are green, tables are full, nothing is
+        mid-flight and nothing is broken. But the screen an operator actually stares at is the one
+        with a failed instance, a workload stuck provisioning, and a quota at 92%.
+      </p>
+      <p class="lp-lede">
+        marspanel ships those states as first-class. Plain HTML, CSS and JavaScript — no build step,
+        no framework, and not one network request at runtime.
+      </p>
+      <div class="lp-cta">
+        <a class="mpn-btn mpn-btn-primary mpn-btn-lg" href="pages/index.html"><svg class="mpn-icon mpn-icon-sm"><use href="#i-grid"/></svg>Browse 38 pages</a>
+        <a class="mpn-btn mpn-btn-lg" href="docs/getting-started.md"><svg class="mpn-icon mpn-icon-sm"><use href="#i-file-text"/></svg>Get started</a>
+      </div>
+    </div>
+    <div class="lp-art">
+      <svg class="mpn-il" style="width:100%;height:auto"><use href="#il-plate"/></svg>
+    </div>
+  </section>
+
+  <div class="lp-stats">
+    <div class="lp-stat"><b>38</b><span>pages</span></div>
+    <div class="lp-stat"><b>342</b><span>classes</span></div>
+    <div class="lp-stat"><b>141</b><span>icons &amp; art</span></div>
+    <div class="lp-stat"><b>0</b><span>dependencies</span></div>
+    <div class="lp-stat"><b>54/54</b><span>contrast pass</span></div>
+  </div>
+
+  <section class="lp-section">
+    <h2 class="lp-h2">What makes it different</h2>
+    <p class="lp-sub">Four decisions, each with a cost that is written down rather than hidden.</p>
+    <div class="lp-feats">
+      <div class="lp-feat">
+        <span class="lp-mark"><svg class="mpn-icon"><use href="#i-alert-triangle"/></svg></span>
+        <h3>Broken states are drawn</h3>
+        <p>A failed instance, a volume stuck detaching for an hour, a backup that died on bucket quota, an expired certificate, a cluster that is no longer N+1. Not a single Lorem ipsum.</p>
+      </div>
+      <div class="lp-feat">
+        <span class="lp-mark"><svg class="mpn-icon"><use href="#i-layers"/></svg></span>
+        <h3>One status vocabulary</h3>
+        <p>Six states, one class. <code class="mpn-code-inline">mpn-is-warn</code> works identically on a pill, banner, timeline dot, calendar event, board card, log line and donut segment.</p>
+      </div>
+      <div class="lp-feat">
+        <span class="lp-mark"><svg class="mpn-icon"><use href="#i-wifi-off"/></svg></span>
+        <h3>Zero requests</h3>
+        <p>No webfont, no icon CDN, no chart library, no analytics. A console served from a single binary on an air-gapped node renders identically to one on the public internet.</p>
+      </div>
+      <div class="lp-feat">
+        <span class="lp-mark"><svg class="mpn-icon"><use href="#i-shield-check"/></svg></span>
+        <h3>Contrast is measured, not claimed</h3>
+        <p>The build composites every translucent surface over its real backdrop and fails if a pair drops below WCAG AA. The first audit failed fourteen pairs; they were fixed, not excused.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <h2 class="lp-h2">Four files, in this order</h2>
+    <p class="lp-sub">The theme script sits in the head on purpose — it resolves dark or light before first paint, so there is no flash.</p>
+    <pre class="mpn-code" style="margin-top:24px">&lt;<span class="mpn-tok-key">link</span> rel=<span class="mpn-tok-str">"stylesheet"</span> href=<span class="mpn-tok-str">"dist/marspanel.min.css"</span>&gt;
+&lt;<span class="mpn-tok-key">script</span> src=<span class="mpn-tok-str">"dist/marspanel-theme.js"</span>&gt;&lt;/script&gt;   <span class="mpn-tok-dim">&lt;!-- in &lt;head&gt; --&gt;</span>
+
+&lt;<span class="mpn-tok-key">body</span> class=<span class="mpn-tok-str">"mpn-root"</span>&gt;
+  &lt;<span class="mpn-tok-key">script</span> src=<span class="mpn-tok-str">"dist/sprites.js"</span>&gt;&lt;/script&gt;
+  &lt;<span class="mpn-tok-key">div</span> class=<span class="mpn-tok-str">"mpn-app"</span>&gt;…&lt;/div&gt;
+  &lt;<span class="mpn-tok-key">script</span> src=<span class="mpn-tok-str">"dist/marspanel.js"</span>&gt;&lt;/script&gt;
+&lt;/body&gt;</pre>
+  </section>
+
+  <section class="lp-section">
+    <h2 class="lp-h2">Start anywhere</h2>
+    <div class="lp-links">
+      <a class="lp-link" href="pages/index.html"><b>All pages</b><span>pages/index.html</span></a>
+      <a class="lp-link" href="pages/dashboard.html"><b>Dashboard</b><span>pages/dashboard.html</span></a>
+      <a class="lp-link" href="pages/components.html"><b>Components</b><span>pages/components.html</span></a>
+      <a class="lp-link" href="pages/icons.html"><b>Icons</b><span>pages/icons.html</span></a>
+      <a class="lp-link" href="pages/instances.html"><b>Data table</b><span>pages/instances.html</span></a>
+      <a class="lp-link" href="pages/invoice.html"><b>Invoice (print)</b><span>pages/invoice.html</span></a>
+      <a class="lp-link" href="pages/login.html"><b>Sign in</b><span>pages/login.html</span></a>
+      <a class="lp-link" href="starter/index.html"><b>Blank starter</b><span>starter/index.html</span></a>
+    </div>
+    <div class="lp-links" style="margin-top:8px">
+      <a class="lp-link" href="docs/getting-started.md"><b>Getting started</b><span>docs/</span></a>
+      <a class="lp-link" href="docs/theming.md"><b>Theming</b><span>docs/</span></a>
+      <a class="lp-link" href="docs/javascript.md"><b>JavaScript</b><span>docs/</span></a>
+      <a class="lp-link" href="docs/rtl-and-print.md"><b>RTL &amp; print</b><span>docs/</span></a>
+      <a class="lp-link" href="docs/accessibility.md"><b>Contrast audit</b><span>docs/</span></a>
+      <a class="lp-link" href="docs/adr/0001-visual-direction.md"><b>Why it looks like this</b><span>docs/adr/</span></a>
+    </div>
+  </section>
+
+  <footer class="lp-foot">
+    <span>MIT licensed</span>
+    <span class="mpn-crumb-sep">·</span>
+    <span>Built by Umar Sabirin</span>
+    <span class="mpn-spacer"></span>
+    <span class="mpn-mono">no runtime dependencies</span>
+  </footer>
+</div>
+
+<script src="dist/marspanel.js"></script>
+</body>
+</html>

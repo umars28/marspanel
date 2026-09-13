@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create account — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+<style>
+.auth { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); min-height: 100vh; }
+.auth-art { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 48px; border-inline-end: 1px solid var(--mpn-line); }
+.auth-quote { max-width: 34ch; font-size: var(--mpn-fs-lg); line-height: 1.6; color: var(--mpn-fg-muted); }
+.auth-quote strong { color: var(--mpn-fg); font-weight: 600; }
+.auth-form { display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
+.auth-box { width: min(380px,100%); display: flex; flex-direction: column; gap: 18px; }
+.auth-sep { display: flex; align-items: center; gap: 12px; color: var(--mpn-fg-faint); font-size: var(--mpn-fs-xs); }
+.auth-sep::before, .auth-sep::after { content: ""; flex: 1; height: 1px; background: var(--mpn-line); }
+@media (max-width: 900px) { .auth { grid-template-columns: minmax(0,1fr); } .auth-art { display: none; } }
+</style>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="auth">
+  <div class="auth-art">
+    <div class="mpn-brand" style="padding:0"><div class="mpn-brand-mark">M</div><div class="mpn-brand-name">marspanel</div></div>
+    <svg class="mpn-il mpn-il-lg"><use href="#il-plate"/></svg>
+    <div>
+      <p class="auth-quote">A console that fetches nothing renders identically when it is served from <strong>a single binary on an air-gapped node</strong>.</p>
+      <div class="mpn-row" style="margin-top:20px"><span class="mpn-pill mpn-is-ok">ok</span><span class="mpn-pill mpn-is-pending">pending</span><span class="mpn-pill mpn-is-danger">danger</span></div>
+    </div>
+  </div>
+  <div class="auth-form">
+    <div class="auth-box">
+      <div>
+        <div class="mpn-eyebrow">Control plane</div>
+        <h1 class="mpn-page-title" style="margin-top:6px">Create account</h1>
+        <p class="mpn-page-sub">Invitations are project-scoped. You cannot self-serve into jkt-prod.</p>
+      </div>
+      <div class="mpn-field"><label class="mpn-label" for="r-name">Full name</label><input class="mpn-input" id="r-name" placeholder="Umar Sabirin"></div>
+      <div class="mpn-field"><label class="mpn-label" for="r-email">Work email</label><input class="mpn-input" id="r-email" type="email" placeholder="you@company.com"></div>
+      <div class="mpn-field"><label class="mpn-label" for="r-pass">Password</label><input class="mpn-input" id="r-pass" type="password"><div class="mpn-progress" style="margin-top:6px"><span class="mpn-progress-fill" style="width:20%"></span></div><span class="mpn-hint">Minimum 14 characters. A passphrase beats complexity rules.</span></div>
+      <div class="mpn-field"><label class="mpn-label" for="r-code">Invitation code</label><input class="mpn-input mpn-input-mono" id="r-code" placeholder="MPN-XXXX-XXXX"></div>
+      <label class="mpn-check"><input type="checkbox"> I have read the acceptable use policy</label>
+      <button class="mpn-btn mpn-btn-primary mpn-btn-lg mpn-btn-block"><svg class="mpn-icon mpn-icon-sm"><use href="#i-user-plus"/></svg>Create account</button>
+      <p class="mpn-hint" style="text-align:center">Already have one? <a class="mpn-link" href="login.html">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

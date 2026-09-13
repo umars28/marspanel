@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+<style>
+.idx-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; position: relative; z-index: 1; }
+.idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 10px; }
+.idx-cell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border: 1px solid var(--mpn-border); border-radius: var(--mpn-radius-sm); background: var(--mpn-bg-inset); }
+.idx-cell:hover { border-color: var(--mpn-accent-line); background: var(--mpn-accent-tint); }
+.idx-name { font-weight: 600; color: var(--mpn-fg); font-size: var(--mpn-fs-base); }
+.idx-file { font-size: var(--mpn-fs-xs); color: var(--mpn-fg-faint); }
+</style>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+<div class="idx-wrap">
+  <div class="mpn-page-head" style="margin-bottom:28px">
+    <div>
+      <div class="mpn-brand" style="padding:0 0 14px"><div class="mpn-brand-mark">M</div><div class="mpn-brand-name">marspanel</div></div>
+      <h1 class="mpn-page-title">37 pages</h1>
+      <p class="mpn-page-sub">Admin template for infrastructure consoles. No build step, no framework, no network requests.</p>
+    </div>
+    <div class="mpn-page-actions">
+      <button class="mpn-btn" data-mpn-theme-toggle>Theme</button>
+      <button class="mpn-btn" data-mpn-dir-toggle>RTL</button>
+    </div>
+  </div>
+  <div class="mpn-stack">
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Overview</h2><span class="mpn-card-act mpn-mono">4</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="dashboard.html"><span class="idx-name">Dashboard</span><span class="idx-file mpn-mono">dashboard.html</span></a>
+          <a class="idx-cell" href="notifications.html"><span class="idx-name">Notifications</span><span class="idx-file mpn-mono">notifications.html</span></a>
+          <a class="idx-cell" href="search.html"><span class="idx-name">Search</span><span class="idx-file mpn-mono">search.html</span></a>
+          <a class="idx-cell" href="timeline.html"><span class="idx-name">Timeline</span><span class="idx-file mpn-mono">timeline.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Infrastructure</h2><span class="mpn-card-act mpn-mono">6</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="instances.html"><span class="idx-name">Instances</span><span class="idx-file mpn-mono">instances.html</span></a>
+          <a class="idx-cell" href="instance-detail.html"><span class="idx-name">Instance detail</span><span class="idx-file mpn-mono">instance-detail.html</span></a>
+          <a class="idx-cell" href="nodes.html"><span class="idx-name">Nodes</span><span class="idx-file mpn-mono">nodes.html</span></a>
+          <a class="idx-cell" href="volumes.html"><span class="idx-name">Volumes</span><span class="idx-file mpn-mono">volumes.html</span></a>
+          <a class="idx-cell" href="images.html"><span class="idx-name">Images</span><span class="idx-file mpn-mono">images.html</span></a>
+          <a class="idx-cell" href="files.html"><span class="idx-name">Files</span><span class="idx-file mpn-mono">files.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Work</h2><span class="mpn-card-act mpn-mono">3</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="board.html"><span class="idx-name">Board</span><span class="idx-file mpn-mono">board.html</span></a>
+          <a class="idx-cell" href="calendar.html"><span class="idx-name">Calendar</span><span class="idx-file mpn-mono">calendar.html</span></a>
+          <a class="idx-cell" href="chat.html"><span class="idx-name">Chat</span><span class="idx-file mpn-mono">chat.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Settings</h2><span class="mpn-card-act mpn-mono">5</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="settings-profile.html"><span class="idx-name">Settings profile</span><span class="idx-file mpn-mono">settings-profile.html</span></a>
+          <a class="idx-cell" href="settings-security.html"><span class="idx-name">Settings security</span><span class="idx-file mpn-mono">settings-security.html</span></a>
+          <a class="idx-cell" href="settings-api-keys.html"><span class="idx-name">Settings api keys</span><span class="idx-file mpn-mono">settings-api-keys.html</span></a>
+          <a class="idx-cell" href="settings-notifications.html"><span class="idx-name">Settings notifications</span><span class="idx-file mpn-mono">settings-notifications.html</span></a>
+          <a class="idx-cell" href="settings-billing.html"><span class="idx-name">Settings billing</span><span class="idx-file mpn-mono">settings-billing.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Commercial</h2><span class="mpn-card-act mpn-mono">2</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="invoice.html"><span class="idx-name">Invoice</span><span class="idx-file mpn-mono">invoice.html</span></a>
+          <a class="idx-cell" href="pricing.html"><span class="idx-name">Pricing</span><span class="idx-file mpn-mono">pricing.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Governance</h2><span class="mpn-card-act mpn-mono">1</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="audit-log.html"><span class="idx-name">Audit log</span><span class="idx-file mpn-mono">audit-log.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Authentication</h2><span class="mpn-card-act mpn-mono">7</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="login.html"><span class="idx-name">Login</span><span class="idx-file mpn-mono">login.html</span></a>
+          <a class="idx-cell" href="register.html"><span class="idx-name">Register</span><span class="idx-file mpn-mono">register.html</span></a>
+          <a class="idx-cell" href="forgot-password.html"><span class="idx-name">Forgot password</span><span class="idx-file mpn-mono">forgot-password.html</span></a>
+          <a class="idx-cell" href="reset-password.html"><span class="idx-name">Reset password</span><span class="idx-file mpn-mono">reset-password.html</span></a>
+          <a class="idx-cell" href="two-factor.html"><span class="idx-name">Two factor</span><span class="idx-file mpn-mono">two-factor.html</span></a>
+          <a class="idx-cell" href="verify-email.html"><span class="idx-name">Verify email</span><span class="idx-file mpn-mono">verify-email.html</span></a>
+          <a class="idx-cell" href="lock-screen.html"><span class="idx-name">Lock screen</span><span class="idx-file mpn-mono">lock-screen.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Error states</h2><span class="mpn-card-act mpn-mono">5</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="404.html"><span class="idx-name">404</span><span class="idx-file mpn-mono">404.html</span></a>
+          <a class="idx-cell" href="403.html"><span class="idx-name">403</span><span class="idx-file mpn-mono">403.html</span></a>
+          <a class="idx-cell" href="500.html"><span class="idx-name">500</span><span class="idx-file mpn-mono">500.html</span></a>
+          <a class="idx-cell" href="503.html"><span class="idx-name">503</span><span class="idx-file mpn-mono">503.html</span></a>
+          <a class="idx-cell" href="offline.html"><span class="idx-name">Offline</span><span class="idx-file mpn-mono">offline.html</span></a>
+        </div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Reference</h2><span class="mpn-card-act mpn-mono">4</span></div>
+        <div class="mpn-card-body"><div class="idx-grid">
+          <a class="idx-cell" href="components.html"><span class="idx-name">Components</span><span class="idx-file mpn-mono">components.html</span></a>
+          <a class="idx-cell" href="icons.html"><span class="idx-name">Icons</span><span class="idx-file mpn-mono">icons.html</span></a>
+          <a class="idx-cell" href="faq.html"><span class="idx-name">Faq</span><span class="idx-file mpn-mono">faq.html</span></a>
+          <a class="idx-cell" href="blank.html"><span class="idx-name">Blank</span><span class="idx-file mpn-mono">blank.html</span></a>
+        </div></div>
+      </section>
+  </div>
+</div>
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

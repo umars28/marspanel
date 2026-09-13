@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starter — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">Your app</div>
+    </div>
+
+    <div class="mpn-nav-label">Main</div>
+    <a class="mpn-nav-item" href="#" aria-current="page"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-server"/></svg><span>Resources</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-settings"/></svg><span>Settings</span></a>
+
+    <div class="mpn-nav-foot">
+      <button class="mpn-nav-item" data-mpn-sidebar-lock aria-pressed="false"><svg class="mpn-icon"><use href="#i-sidebar"/></svg><span>Collapse</span></button>
+    </div>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>local</span>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Toggle theme" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <div class="mpn-avatar">AB</div>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Section</div>
+          <h1 class="mpn-page-title">Page title</h1>
+          <p class="mpn-page-sub">Replace everything below. The shell above is the part you keep.</p>
+        </div>
+        <div class="mpn-page-actions">
+          <button class="mpn-btn">Secondary</button>
+          <button class="mpn-btn mpn-btn-primary"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Primary</button>
+        </div>
+      </div>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Card</h2></div>
+        <div class="mpn-card-body">
+          <p class="mpn-muted">Content goes here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

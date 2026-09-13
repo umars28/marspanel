@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+
+    <div class="mpn-nav-label">Overview</div>
+    <a class="mpn-nav-item" href="#" aria-current="page"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-activity"/></svg><span>Activity</span></a>
+
+    <div class="mpn-nav-label">Compute</div>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-server"/></svg><span>Instances</span><span class="mpn-nav-badge">32</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Images</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-camera"/></svg><span>Snapshots</span></a>
+
+    <div class="mpn-nav-label">Network</div>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-share"/></svg><span>Load balancers</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-shield"/></svg><span>Firewall</span></a>
+
+    <div class="mpn-nav-label">Reference</div>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+
+    <div class="mpn-nav-label">Access</div>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-users"/></svg><span>Users</span></a>
+    <a class="mpn-nav-item" href="#"><svg class="mpn-icon"><use href="#i-file"/></svg><span>Audit log</span></a>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation">
+        <svg class="mpn-icon"><use href="#i-menu"/></svg>
+      </button>
+      <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>jkt-01</span>
+      <button class="mpn-search" data-mpn-open="palette">
+        <svg class="mpn-icon mpn-icon-sm"><use href="#i-search"/></svg>
+        Search instances, volumes, users…
+        <kbd class="mpn-kbd">⌘K</kbd>
+      </button>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-theme-toggle aria-label="Toggle theme">
+          <svg class="mpn-icon"><use href="#i-contrast"/></svg>
+        </button>
+        <button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Notifications">
+          <svg class="mpn-icon"><use href="#i-bell"/></svg>
+        </button>
+        <div class="mpn-avatar">UM</div>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Region jkt-01</div>
+          <h1 class="mpn-page-title">Dashboard</h1>
+          <p class="mpn-page-sub">32 instances · 4 nodes · updated 40 seconds ago</p>
+        </div>
+        <div class="mpn-page-actions">
+          <button class="mpn-btn"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export</button>
+          <button class="mpn-btn mpn-btn-primary" data-mpn-open="create"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>New instance</button>
+        </div>
+      </div>
+
+      <div class="mpn-banner mpn-is-warn">
+        <span class="mpn-pill mpn-is-warn">warn</span>
+        <span>Memory quota in <strong class="mpn-mono">jkt-01</strong> is at <strong class="mpn-mono">92%</strong> — the cluster is no longer N+1.</span>
+        <button class="mpn-btn mpn-btn-sm mpn-banner-act">Review capacity</button>
+      </div>
+
+      <div class="mpn-grid mpn-g-4">
+        <section class="mpn-card">
+          <div class="mpn-card-body">
+            <div class="mpn-stat-label">Running instances</div>
+            <div class="mpn-stat-value">28<span class="mpn-stat-unit">/32</span></div>
+            <div class="mpn-stat-meta"><span class="mpn-delta mpn-delta-up">▲ 2</span> since yesterday</div>
+          </div>
+        </section>
+        <section class="mpn-card">
+          <div class="mpn-card-body">
+            <div class="mpn-stat-label">vCPU allocated</div>
+            <div class="mpn-stat-value">71%</div>
+            <div class="mpn-stat-meta">184 of 256 vCPU</div>
+            <div class="mpn-meter"><span class="mpn-meter-fill" style="width:71%"></span></div>
+          </div>
+        </section>
+        <section class="mpn-card">
+          <div class="mpn-card-body">
+            <div class="mpn-stat-label">Memory quota</div>
+            <div class="mpn-stat-value">92%</div>
+            <div class="mpn-stat-meta"><span class="mpn-delta mpn-delta-down">▲ 9%</span> this week</div>
+            <div class="mpn-meter"><span class="mpn-meter-fill is-warn" style="width:92%"></span></div>
+          </div>
+        </section>
+        <section class="mpn-card">
+          <div class="mpn-card-body">
+            <div class="mpn-stat-label">Spend this month</div>
+            <div class="mpn-stat-value">$12,480</div>
+            <div class="mpn-stat-meta">
+              <span class="mpn-delta mpn-delta-up">▲ 12.4%</span>
+              <svg class="mpn-spark" viewBox="0 0 108 30" preserveAspectRatio="none">
+                <path class="mpn-chart-line" d="M0 24 L12 21 L24 23 L36 17 L48 19 L60 12 L72 14 L84 8 L96 10 L108 4"/>
+              </svg>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mpn-grid mpn-g-split">
+        <section class="mpn-card">
+          <div class="mpn-card-head">
+            <div>
+              <h2 class="mpn-card-title">Requests per second</h2>
+              <div class="mpn-card-sub">Across 3 load balancers</div>
+            </div>
+            <button class="mpn-card-act" data-mpn-menu="range-menu">7 days <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+          </div>
+          <div class="mpn-card-body" style="padding-bottom:4px">
+            <svg class="mpn-chart" viewBox="0 0 600 180" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="mpn-fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--mpn-accent)" stop-opacity=".28"/>
+                  <stop offset="100%" stop-color="var(--mpn-accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g class="mpn-chart-grid">
+                <line x1="0" y1="40" x2="600" y2="40"/>
+                <line x1="0" y1="80" x2="600" y2="80"/>
+                <line x1="0" y1="120" x2="600" y2="120"/>
+                <line x1="0" y1="160" x2="600" y2="160"/>
+              </g>
+              <path class="mpn-chart-area" fill="url(#mpn-fill)" d="M0 112 L26 102 L52 108 L78 96 L104 87 L130 92 L157 82 L183 89 L209 77 L235 69 L261 75 L287 66 L313 56 L339 62 L365 52 L391 58 L417 47 L443 42 L470 49 L496 38 L522 45 L548 34 L574 40 L600 31 L600 180 L0 180 Z"/>
+              <path class="mpn-chart-line" d="M0 112 L26 102 L52 108 L78 96 L104 87 L130 92 L157 82 L183 89 L209 77 L235 69 L261 75 L287 66 L313 56 L339 62 L365 52 L391 58 L417 47 L443 42 L470 49 L496 38 L522 45 L548 34 L574 40 L600 31"/>
+            </svg>
+          </div>
+          <div class="mpn-legend">
+            <span class="mpn-legend-item"><i class="mpn-legend-swatch"></i>Average rps</span>
+            <span class="mpn-legend-item mpn-mono">peak 4,812 rps · Mon 14:20</span>
+          </div>
+        </section>
+
+        <section class="mpn-card">
+          <div class="mpn-card-head"><h2 class="mpn-card-title">Activity</h2></div>
+          <div class="mpn-card-body" style="padding-top:4px">
+            <div class="mpn-feed">
+              <div class="mpn-feed-item"><span class="mpn-feed-time">09:12</span><span class="mpn-feed-body"><strong>api-04</strong> readiness failed 3×</span></div>
+              <div class="mpn-feed-item"><span class="mpn-feed-time">09:04</span><span class="mpn-feed-body"><strong>umar</strong> created an API key</span></div>
+              <div class="mpn-feed-item"><span class="mpn-feed-time">08:51</span><span class="mpn-feed-body"><strong>db-02</strong> started provisioning</span></div>
+              <div class="mpn-feed-item"><span class="mpn-feed-time">08:30</span><span class="mpn-feed-body"><strong>backup-nightly</strong> failed — bucket quota full</span></div>
+              <div class="mpn-feed-item"><span class="mpn-feed-time">07:58</span><span class="mpn-feed-body"><strong>queue-03</strong> entered draining</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head">
+          <h2 class="mpn-card-title">Instances</h2>
+          <a class="mpn-card-act" href="#">View all <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></a>
+        </div>
+
+        <div class="mpn-toolbar">
+          <input class="mpn-input" style="width:200px" placeholder="Filter by name…">
+          <button class="mpn-chip">runtime: all <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+          <button class="mpn-chip" aria-pressed="true">state: all <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+          <button class="mpn-chip">node: all <svg class="mpn-icon mpn-icon-sm"><use href="#i-chevron-down"/></svg></button>
+        </div>
+
+        <div class="mpn-bulkbar" data-mpn-bulkbar hidden>
+          <strong data-mpn-bulk-count>0</strong> selected
+          <button class="mpn-btn mpn-btn-sm">Stop</button>
+          <button class="mpn-btn mpn-btn-sm">Snapshot</button>
+          <button class="mpn-btn mpn-btn-sm mpn-btn-danger">Delete</button>
+        </div>
+
+        <div class="mpn-table-wrap">
+          <table class="mpn-table">
+            <thead>
+              <tr>
+                <th class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-select-all aria-label="Select all"></label></th>
+                <th aria-sort="ascending">Name</th>
+                <th>State</th>
+                <th>Shape</th>
+                <th>Address</th>
+                <th>Node</th>
+                <th>Age</th>
+                <th class="mpn-cell-act"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select web-01"></label></td>
+                <td class="mpn-cell-key">web-01</td>
+                <td><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.17</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-mono">14d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select web-02"></label></td>
+                <td class="mpn-cell-key">web-02</td>
+                <td><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.18</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-mono">14d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select db-02"></label></td>
+                <td class="mpn-cell-key">db-02</td>
+                <td><span class="mpn-pill mpn-is-pending">provisioning</span></td>
+                <td class="mpn-cell-mono">m4.2x · 8 vCPU / 64 GiB</td>
+                <td class="mpn-cell-mono">—</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-mono">2m</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr class="mpn-row-danger">
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select cache-01"></label></td>
+                <td class="mpn-cell-key">cache-01</td>
+                <td><span class="mpn-pill mpn-is-danger">failed</span></td>
+                <td class="mpn-cell-mono">b1.1x · 1 vCPU / 2 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.51</td>
+                <td class="mpn-cell-mono">node-jkt-03</td>
+                <td class="mpn-cell-mono">6h</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select queue-03"></label></td>
+                <td class="mpn-cell-key">queue-03</td>
+                <td><span class="mpn-pill mpn-is-warn">draining</span></td>
+                <td class="mpn-cell-mono">c2.2x · 2 vCPU / 8 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.33</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-mono">31d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select edge-01"></label></td>
+                <td class="mpn-cell-key">edge-01</td>
+                <td><span class="mpn-pill mpn-is-ok">running</span></td>
+                <td class="mpn-cell-mono">b1.2x · 2 vCPU / 4 GiB</td>
+                <td class="mpn-cell-mono">10.30.1.4</td>
+                <td class="mpn-cell-mono">node-sgp-01</td>
+                <td class="mpn-cell-mono">92d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select batch-07"></label></td>
+                <td class="mpn-cell-key">batch-07</td>
+                <td><span class="mpn-pill mpn-is-idle">stopped</span></td>
+                <td class="mpn-cell-mono">m4.1x · 4 vCPU / 32 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.62</td>
+                <td class="mpn-cell-mono">node-jkt-01</td>
+                <td class="mpn-cell-mono">3d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+              <tr>
+                <td class="mpn-cell-check"><label class="mpn-check"><input type="checkbox" data-mpn-row-check aria-label="Select api-04"></label></td>
+                <td class="mpn-cell-key">api-04</td>
+                <td><span class="mpn-pill mpn-is-info">degraded</span></td>
+                <td class="mpn-cell-mono">c2.4x · 4 vCPU / 16 GiB</td>
+                <td class="mpn-cell-mono">10.20.4.24</td>
+                <td class="mpn-cell-mono">node-jkt-02</td>
+                <td class="mpn-cell-mono">8d</td>
+                <td class="mpn-cell-act"><button class="mpn-icon-btn mpn-icon-btn-bare" aria-label="Actions"><svg class="mpn-icon mpn-icon-sm"><use href="#i-more"/></svg></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mpn-pager">
+          <span>Showing <strong class="mpn-mono">8</strong> of <strong class="mpn-mono">32</strong></span>
+          <span class="mpn-spacer"></span>
+          <button class="mpn-btn mpn-btn-sm" disabled>Previous</button>
+          <button class="mpn-btn mpn-btn-sm">Next</button>
+        </div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Status vocabulary</h2></div>
+        <div class="mpn-card-body mpn-row">
+          <span class="mpn-pill mpn-is-ok">ok</span>
+          <span class="mpn-pill mpn-is-warn">warn</span>
+          <span class="mpn-pill mpn-is-danger">danger</span>
+          <span class="mpn-pill mpn-is-info">info</span>
+          <span class="mpn-pill mpn-is-pending">pending</span>
+          <span class="mpn-pill mpn-is-idle">idle</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-menu" id="range-menu" hidden style="right:32px;top:auto">
+  <button class="mpn-menu-item">Last 24 hours</button>
+  <button class="mpn-menu-item">7 days</button>
+  <button class="mpn-menu-item">30 days</button>
+  <div class="mpn-menu-sep"></div>
+  <button class="mpn-menu-item">Custom range…</button>
+</div>
+
+<div class="mpn-palette" id="palette" hidden>
+  <input class="mpn-palette-field" placeholder="Type a command or search…" aria-label="Command palette">
+  <div class="mpn-palette-list">
+    <div class="mpn-palette-group">Actions</div>
+    <button class="mpn-palette-item" aria-selected="true"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create instance</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-camera"/></svg>Take snapshot</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export instance list</button>
+    <div class="mpn-palette-group">Go to</div>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-server"/></svg>Instances</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-share"/></svg>Load balancers</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-file"/></svg>Audit log</button>
+  </div>
+</div>
+
+<div class="mpn-drawer" id="create" hidden role="dialog" aria-modal="true" aria-labelledby="create-title">
+  <div class="mpn-overlay-head">
+    <h2 class="mpn-overlay-title" id="create-title">New instance</h2>
+    <button class="mpn-icon-btn mpn-icon-btn-bare mpn-spacer" data-mpn-close aria-label="Close">✕</button>
+  </div>
+  <div class="mpn-overlay-body">
+    <div class="mpn-fieldset">
+      <div class="mpn-field">
+        <label class="mpn-label" for="f-name">Name</label>
+        <input class="mpn-input mpn-input-mono" id="f-name" value="web-03">
+        <span class="mpn-hint">Lowercase letters, digits and hyphens.</span>
+      </div>
+      <div class="mpn-field">
+        <label class="mpn-label" for="f-shape">Shape</label>
+        <select class="mpn-select" id="f-shape">
+          <option>b1.1x · 1 vCPU / 2 GiB</option>
+          <option selected>c2.4x · 4 vCPU / 16 GiB</option>
+          <option>m4.2x · 8 vCPU / 64 GiB</option>
+        </select>
+      </div>
+      <div class="mpn-field">
+        <label class="mpn-label" for="f-node">Placement</label>
+        <label class="mpn-choice">
+          <input type="radio" name="place" class="mpn-sr" checked>
+          <div>
+            <div class="mpn-label">Automatic</div>
+            <div class="mpn-hint">Scheduler picks the node with the most free memory.</div>
+          </div>
+        </label>
+        <label class="mpn-choice">
+          <input type="radio" name="place" class="mpn-sr">
+          <div>
+            <div class="mpn-label">Pin to node</div>
+            <div class="mpn-hint">Instance will not be rescheduled on failure.</div>
+          </div>
+        </label>
+      </div>
+      <label class="mpn-check"><input type="checkbox" class="mpn-switch" checked> Enable nightly snapshots</label>
+    </div>
+  </div>
+  <div class="mpn-overlay-foot">
+    <span class="mpn-hint">Estimated <strong class="mpn-mono">$74.20</strong>/month</span>
+    <span class="mpn-spacer"></span>
+    <button class="mpn-btn" data-mpn-close>Cancel</button>
+    <button class="mpn-btn mpn-btn-primary">Create</button>
+  </div>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>

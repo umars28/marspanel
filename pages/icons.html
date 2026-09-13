@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icons — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+<style>
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 2px; }
+.icon-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 18px 8px; border-radius: var(--mpn-radius-sm); cursor: copy;
+}
+.icon-cell:hover { background: var(--mpn-bg-hover); }
+.icon-cell:hover .mpn-icon { color: var(--mpn-accent); }
+.icon-cell .mpn-icon { width: 22px; height: 22px; color: var(--mpn-fg); }
+.icon-name {
+  font-family: var(--mpn-font-mono); font-size: 10px; color: var(--mpn-fg-faint);
+  text-align: center; overflow-wrap: anywhere;
+}
+.il-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--mpn-gap); }
+.il-cell { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; }
+</style>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand"><div class="mpn-brand-mark">M</div><div class="mpn-brand-name">marspanel</div></div>
+    <div class="mpn-nav-label">Pages</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html" aria-current="page"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="login.html"><svg class="mpn-icon"><use href="#i-log-in"/></svg><span>Sign in</span></a>
+    <a class="mpn-nav-item" href="404.html"><svg class="mpn-icon"><use href="#i-alert-circle"/></svg><span>Error state</span></a>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <nav class="mpn-crumbs"><a href="dashboard.html">marspanel</a><span class="mpn-crumb-sep">/</span><span>Icons</span></nav>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <div class="mpn-avatar">UM</div>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Assets</div>
+          <h1 class="mpn-page-title">Icons</h1>
+          <p class="mpn-page-sub"><span id="icon-count" class="mpn-mono">0</span> symbols · 24×24 stroke · click any icon to copy its markup</p>
+        </div>
+        <div class="mpn-page-actions">
+          <input class="mpn-input" id="icon-filter" placeholder="Filter icons…" style="width:220px">
+        </div>
+      </div>
+
+      <div class="mpn-banner mpn-is-info">
+        <svg class="mpn-icon"><use href="#i-info"/></svg>
+        <span>Icons inherit <span class="mpn-code-inline">currentColor</span> and the stroke width from <span class="mpn-code-inline">.mpn-icon</span>. Paste <span class="mpn-code-inline">assets/icons.svg</span> inline to ship with zero requests.</span>
+      </div>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Icon set</h2></div>
+        <div class="mpn-card-body"><div class="icon-grid" id="icon-grid"></div></div>
+      </section>
+
+      <section class="mpn-card">
+        <div class="mpn-card-head"><h2 class="mpn-card-title">Illustrations</h2></div>
+        <div class="mpn-card-body"><div class="il-grid" id="il-grid"></div></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-toasts" id="toasts"></div>
+
+<script src="../dist/marspanel.js"></script>
+<script>
+(function () {
+  var iconIds = [];
+  var ilIds = [];
+  document.querySelectorAll("symbol").forEach(function (s) {
+    if (s.id.indexOf("i-") === 0) iconIds.push(s.id);
+    if (s.id.indexOf("il-") === 0) ilIds.push(s.id);
+  });
+
+  var grid = document.getElementById("icon-grid");
+  iconIds.forEach(function (id) {
+    var cell = document.createElement("button");
+    cell.className = "icon-cell";
+    cell.dataset.id = id;
+    cell.innerHTML =
+      '<svg class="mpn-icon"><use href="#' + id + '"/></svg><span class="icon-name">' + id + "</span>";
+    grid.appendChild(cell);
+  });
+  document.getElementById("icon-count").textContent = String(iconIds.length);
+
+  var ilGrid = document.getElementById("il-grid");
+  ilIds.forEach(function (id) {
+    var cell = document.createElement("div");
+    cell.className = "il-cell";
+    cell.innerHTML =
+      '<svg class="mpn-il mpn-il-sm"><use href="#' + id + '"/></svg><span class="icon-name">' + id + "</span>";
+    ilGrid.appendChild(cell);
+  });
+
+  document.getElementById("icon-filter").addEventListener("input", function (e) {
+    var q = e.target.value.trim().toLowerCase();
+    var shown = 0;
+    grid.querySelectorAll(".icon-cell").forEach(function (cell) {
+      var hit = !q || cell.dataset.id.indexOf(q) !== -1;
+      cell.hidden = !hit;
+      if (hit) shown++;
+    });
+    document.getElementById("icon-count").textContent = String(shown);
+  });
+
+  grid.addEventListener("click", function (e) {
+    var cell = e.target.closest(".icon-cell");
+    if (!cell) return;
+    var markup = '<svg class="mpn-icon"><use href="#' + cell.dataset.id + '"/></svg>';
+    if (navigator.clipboard) navigator.clipboard.writeText(markup);
+    var t = document.createElement("div");
+    t.className = "mpn-toast";
+    t.innerHTML =
+      '<svg class="mpn-icon" style="color:var(--mpn-ok)"><use href="#i-check-circle"/></svg>' +
+      "<div><strong>Copied</strong><div class=\"mpn-hint mpn-mono\">" + cell.dataset.id + "</div></div>";
+    document.getElementById("toasts").appendChild(t);
+    setTimeout(function () {
+      t.remove();
+    }, 1800);
+  });
+})();
+</script>
+</body>
+</html>

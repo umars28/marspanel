@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notification settings — marspanel</title>
+<link rel="stylesheet" href="../dist/marspanel.min.css">
+<script src="../dist/marspanel-theme.js"></script>
+</head>
+<body class="mpn-root">
+<script src="../dist/sprites.js"></script>
+
+<div class="mpn-app">
+  <aside class="mpn-sidebar">
+    <div class="mpn-brand">
+      <div class="mpn-brand-mark">M</div>
+      <div class="mpn-brand-name">marspanel</div>
+    </div>
+    <div class="mpn-nav-label">Overview</div>
+    <a class="mpn-nav-item" href="dashboard.html"><svg class="mpn-icon"><use href="#i-grid"/></svg><span>Dashboard</span></a>
+    <a class="mpn-nav-item" href="notifications.html"><svg class="mpn-icon"><use href="#i-bell"/></svg><span>Notifications</span><span class="mpn-nav-badge">3</span></a>
+    <div class="mpn-nav-label">Infrastructure</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-server"/></svg><span>Compute</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="instances.html"><span>Instances</span></a>
+      <a class="mpn-nav-item" href="instance-detail.html"><span>Instance detail</span></a>
+      <a class="mpn-nav-item" href="nodes.html"><span>Nodes</span></a>
+      <a class="mpn-nav-item" href="images.html"><span>Images</span></a>
+    </div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="false"><svg class="mpn-icon"><use href="#i-hard-drive"/></svg><span>Storage</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub" hidden>
+      <a class="mpn-nav-item" href="volumes.html"><span>Volumes</span></a>
+      <a class="mpn-nav-item" href="files.html"><span>File browser</span></a>
+    </div>
+    <div class="mpn-nav-label">Work</div>
+    <a class="mpn-nav-item" href="board.html"><svg class="mpn-icon"><use href="#i-columns"/></svg><span>Board</span></a>
+    <a class="mpn-nav-item" href="calendar.html"><svg class="mpn-icon"><use href="#i-calendar"/></svg><span>Calendar</span></a>
+    <a class="mpn-nav-item" href="chat.html"><svg class="mpn-icon"><use href="#i-message"/></svg><span>Chat</span></a>
+    <a class="mpn-nav-item" href="timeline.html"><svg class="mpn-icon"><use href="#i-history"/></svg><span>Timeline</span></a>
+    <div class="mpn-nav-label">Account</div>
+    <button class="mpn-nav-item" data-mpn-nav-group aria-expanded="true"><svg class="mpn-icon"><use href="#i-settings"/></svg><span>Settings</span><svg class="mpn-nav-caret"><use href="#i-chevron-right"/></svg></button>
+    <div class="mpn-nav-sub">
+      <a class="mpn-nav-item" href="settings-profile.html"><span>Profile</span></a>
+      <a class="mpn-nav-item" href="settings-security.html"><span>Security</span></a>
+      <a class="mpn-nav-item" href="settings-api-keys.html"><span>API keys</span></a>
+      <a class="mpn-nav-item" href="settings-notifications.html" aria-current="page"><span>Notifications</span></a>
+      <a class="mpn-nav-item" href="settings-billing.html"><span>Billing</span></a>
+    </div>
+    <a class="mpn-nav-item" href="invoice.html"><svg class="mpn-icon"><use href="#i-file-text"/></svg><span>Invoice</span></a>
+    <a class="mpn-nav-item" href="pricing.html"><svg class="mpn-icon"><use href="#i-dollar"/></svg><span>Pricing</span></a>
+    <a class="mpn-nav-item" href="audit-log.html"><svg class="mpn-icon"><use href="#i-shield"/></svg><span>Audit log</span></a>
+    <div class="mpn-nav-label">Reference</div>
+    <a class="mpn-nav-item" href="components.html"><svg class="mpn-icon"><use href="#i-layers"/></svg><span>Components</span></a>
+    <a class="mpn-nav-item" href="icons.html"><svg class="mpn-icon"><use href="#i-star"/></svg><span>Icons</span></a>
+    <a class="mpn-nav-item" href="faq.html"><svg class="mpn-icon"><use href="#i-help"/></svg><span>Help</span></a>
+    <a class="mpn-nav-item" href="blank.html"><svg class="mpn-icon"><use href="#i-file"/></svg><span>Blank page</span></a>
+    <div class="mpn-nav-foot">
+      <button class="mpn-nav-item" data-mpn-sidebar-lock aria-pressed="false"><svg class="mpn-icon"><use href="#i-sidebar"/></svg><span>Collapse</span></button>
+    </div>
+  </aside>
+
+  <div class="mpn-main">
+    <header class="mpn-topbar">
+      <button class="mpn-icon-btn mpn-nav-toggle" data-mpn-nav-toggle aria-label="Toggle navigation"><svg class="mpn-icon"><use href="#i-menu"/></svg></button>
+      <span class="mpn-env"><span class="mpn-dot mpn-is-ok"></span>jkt-01</span>
+      <button class="mpn-search" data-mpn-open="palette"><svg class="mpn-icon mpn-icon-sm"><use href="#i-search"/></svg>Search…<kbd class="mpn-kbd">⌘K</kbd></button>
+      <div class="mpn-topbar-end">
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Toggle theme" data-mpn-theme-toggle aria-label="Toggle theme"><svg class="mpn-icon"><use href="#i-contrast"/></svg></button>
+        <button class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="Left-to-right / right-to-left" data-mpn-dir-toggle aria-label="Toggle direction"><svg class="mpn-icon"><use href="#i-code"/></svg></button>
+        <a class="mpn-icon-btn mpn-icon-btn-bare" data-mpn-tip="3 unread" href="notifications.html" aria-label="Notifications"><svg class="mpn-icon"><use href="#i-bell"/></svg></a>
+        <button class="mpn-avatar" data-mpn-menu="user-menu" aria-label="Account">UM</button>
+      </div>
+    </header>
+
+    <main class="mpn-page">
+      <div class="mpn-page-head">
+        <div>
+          <div class="mpn-eyebrow">Settings</div>
+          <h1 class="mpn-page-title">Notifications</h1>
+          <p class="mpn-page-sub">Which events reach you, and where</p>
+        </div>
+        
+      </div>
+      <div class="mpn-tabs">
+        <a class="mpn-tab" href="settings-profile.html" aria-selected="false">Profile</a>
+        <a class="mpn-tab" href="settings-security.html" aria-selected="false">Security</a>
+        <a class="mpn-tab" href="settings-api-keys.html" aria-selected="false">API keys</a>
+        <a class="mpn-tab" href="settings-notifications.html" aria-selected="true">Notifications</a>
+        <a class="mpn-tab" href="settings-billing.html" aria-selected="false">Billing</a>
+      </div>
+      <section class="mpn-card">
+        <div class="mpn-table-wrap">
+          <table class="mpn-table">
+            <thead><tr><th>Event</th><th>Email</th><th>Push</th><th>Webhook</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--mpn-fg)">Instance failed</td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Webhook"></td></tr>
+              <tr><td style="color:var(--mpn-fg)">Quota above 90%</td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Webhook"></td></tr>
+              <tr><td style="color:var(--mpn-fg)">Backup failed</td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Webhook"></td></tr>
+              <tr><td style="color:var(--mpn-fg)">Certificate expiring</td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Webhook"></td></tr>
+              <tr><td style="color:var(--mpn-fg)">Node cordoned</td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Webhook"></td></tr>
+              <tr><td style="color:var(--mpn-fg)">Weekly cost digest</td>
+                <td><input type="checkbox" class="mpn-switch" checked aria-label="Email"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Push"></td>
+                <td><input type="checkbox" class="mpn-switch" aria-label="Webhook"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="mpn-card">
+        <div class="mpn-card-head"><div><h2 class="mpn-card-title">Quiet hours</h2></div></div>
+        <div class="mpn-card-body">
+          <div class="mpn-form-inline">
+            <div class="mpn-field"><label class="mpn-label" for="q-from">From</label><input class="mpn-input" id="q-from" type="time" value="22:00" style="width:130px"></div>
+            <div class="mpn-field"><label class="mpn-label" for="q-to">To</label><input class="mpn-input" id="q-to" type="time" value="07:00" style="width:130px"></div>
+            <label class="mpn-check"><input type="checkbox" class="mpn-switch" checked> Still page me for <strong style="margin-inline-start:4px">danger</strong></label>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="mpn-palette" id="palette" hidden>
+  <input class="mpn-palette-field" placeholder="Type a command or search…" aria-label="Command palette">
+  <div class="mpn-palette-list">
+    <div class="mpn-palette-group">Actions</div>
+    <button class="mpn-palette-item" aria-selected="true"><svg class="mpn-icon mpn-icon-sm"><use href="#i-plus"/></svg>Create instance</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-camera"/></svg>Take snapshot</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-download"/></svg>Export instance list</button>
+    <div class="mpn-palette-group">Go to</div>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-server"/></svg>Instances</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-shield"/></svg>Audit log</button>
+    <button class="mpn-palette-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Settings</button>
+  </div>
+</div>
+
+<div class="mpn-menu" id="user-menu" hidden>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-user"/></svg>Profile</button>
+  <button class="mpn-menu-item"><svg class="mpn-icon mpn-icon-sm"><use href="#i-settings"/></svg>Preferences</button>
+  <button class="mpn-menu-item" data-mpn-dir-toggle><svg class="mpn-icon mpn-icon-sm"><use href="#i-code"/></svg>Flip direction (RTL)</button>
+  <div class="mpn-menu-sep"></div>
+  <button class="mpn-menu-item is-danger"><svg class="mpn-icon mpn-icon-sm"><use href="#i-log-out"/></svg>Sign out</button>
+</div>
+
+<script src="../dist/marspanel.js"></script>
+</body>
+</html>
